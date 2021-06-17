@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.aurel.ecorescue.ui.main.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:enterAnim="@animator/fragment_fade_in"
+            app:exitAnim="@animator/fragment_fade_out"
+            app:popEnterAnim="@animator/fragment_fade_in"
+            app:popExitAnim="@animator/fragment_fade_out"/>
+        <action
+            android:id="@+id/action_mainFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment"
+            app:enterAnim="@animator/fragment_fade_in"
+            app:exitAnim="@animator/fragment_fade_out"
+            app:popEnterAnim="@animator/fragment_fade_in"
+            app:popExitAnim="@animator/fragment_fade_out"/>
+        <action
+            android:id="@+id/action_mainFragment_to_coursesFragment"
+            app:destination="@id/coursesFragment"
+            app:enterAnim="@animator/fragment_fade_in"
+            app:exitAnim="@animator/fragment_fade_out"
+            app:popEnterAnim="@animator/fragment_fade_in"
+            app:popExitAnim="@animator/fragment_fade_out"/>
+        <action
+            android:id="@+id/action_mainFragment_to_standbyModeFragment"
+            app:destination="@id/standbyModeFragment"
+            app:enterAnim="@animator/fragment_fade_in"
+            app:exitAnim="@animator/fragment_fade_out"
+            app:popEnterAnim="@animator/fragment_fade_in"
+            app:popExitAnim="@animator/fragment_fade_out"/>
+        <action
+            android:id="@+id/action_mainFragment_to_contactImprintFragment"
+            app:destination="@id/contactImprintFragment"
+            app:enterAnim="@animator/fragment_fade_in"
+            app:exitAnim="@animator/fragment_fade_out"
+            app:popEnterAnim="@animator/fragment_fade_in"
+            app:popExitAnim="@animator/fragment_fade_out"/>
+        <action
+            android:id="@+id/action_mainFragment_to_faqFragment"
+            app:destination="@id/faqFragment"
+            app:enterAnim="@animator/fragment_fade_in"
+            app:exitAnim="@animator/fragment_fade_out"
+            app:popEnterAnim="@animator/fragment_fade_in"
+            app:popExitAnim="@animator/fragment_fade_out"/>
+        <action
+            android:id="@+id/action_mainFragment_to_legalNoticeFragment"
+            app:destination="@id/legalNoticeFragment"
+            app:enterAnim="@animator/fragment_fade_in"
+            app:exitAnim="@animator/fragment_fade_out"
+            app:popEnterAnim="@animator/fragment_fade_in"
+            app:popExitAnim="@animator/fragment_fade_out"/>
+        <action
+            android:id="@+id/action_mainFragment_to_aedMapFragment"
+            app:destination="@id/aedMapFragment"
+            app:enterAnim="@animator/fragment_fade_in"
+            app:exitAnim="@animator/fragment_fade_out"
+            app:popEnterAnim="@animator/fragment_fade_in"
+            app:popExitAnim="@animator/fragment_fade_out"/>
+        <action
+            android:id="@+id/action_mainFragment_to_emergencyFragment"
+            app:destination="@id/emergencyFragment"
+            app:enterAnim="@animator/fragment_fade_in"
+            app:exitAnim="@animator/fragment_fade_out"
+            app:popEnterAnim="@animator/fragment_fade_in"
+            app:popExitAnim="@animator/fragment_fade_out"/>
+        <action
+            android:id="@+id/action_mainFragment_to_newsFragment"
+            app:destination="@id/newsFragment"
+            app:enterAnim="@animator/fragment_fade_in"
+            app:exitAnim="@animator/fragment_fade_out"
+            app:popEnterAnim="@animator/fragment_fade_in"
+            app:popExitAnim="@animator/fragment_fade_out"/>
+        <action
+            android:id="@+id/action_mainFragment_to_aboutMeineStadtRettetFragment"
+            app:destination="@id/aboutMeineStadtRettetFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/emergencyFragment"
+        android:name="com.aurel.ecorescue.ui.main.EmergencyFragment"
+        android:label="fragment_emergency"
+        tools:layout="@layout/fragment_emergency" />
+
+    <fragment
+        android:id="@+id/aedMapFragment"
+        android:name="com.aurel.ecorescue.ui.main.AEDMapFragment"
+        android:label="fragment_aed_map"
+        tools:layout="@layout/fragment_aed_map" >
+        <action
+            android:id="@+id/action_aedMapFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="com.aurel.ecorescue.ui.news.NewsFragment"
+        android:label="fragment_news"
+        tools:layout="@layout/fragment_news" >
+        <action
+            android:id="@+id/action_newsFragment_to_newsDetailsFragment"
+            app:destination="@id/newsDetailsFragment"
+            app:enterAnim="@animator/fragment_fade_in"
+            app:exitAnim="@animator/fragment_fade_out"
+            app:popEnterAnim="@animator/fragment_fade_in"
+            app:popExitAnim="@animator/fragment_fade_out" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/newsDetailsFragment"
+        android:name="com.aurel.ecorescue.ui.news.NewsDetailsFragment"
+        android:label="fragment_news_details"
+        tools:layout="@layout/fragment_news_details" />
+
+    <fragment
+        android:id="@+id/coursesFragment"
+        android:name="com.aurel.ecorescue.ui.main.CoursesFragment"
+        android:label="fragment_courses"
+        tools:layout="@layout/fragment_courses" >
+        <action
+            android:id="@+id/action_coursesFragment_to_courseDetailsFragment"
+            app:destination="@id/courseDetailsFragment"
+            app:enterAnim="@animator/fragment_fade_in"
+            app:exitAnim="@animator/fragment_fade_out"
+            app:popEnterAnim="@animator/fragment_fade_in"
+            app:popExitAnim="@animator/fragment_fade_out"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/courseDetailsFragment"
+        android:name="com.aurel.ecorescue.ui.main.CourseDetailsFragment"
+        android:label="fragment_courses"
+        tools:layout="@layout/fragment_course_details" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.aurel.ecorescue.ui.account.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_agreementFragment"
+            app:destination="@id/agreementFragment"
+            app:enterAnim="@animator/fragment_fade_in"
+            app:exitAnim="@animator/fragment_fade_out"
+            app:popEnterAnim="@animator/fragment_fade_in"
+            app:popExitAnim="@animator/fragment_fade_out"/>
+        <action
+            android:id="@+id/action_profileFragment_to_accessFragment"
+            app:destination="@id/accessFragment"
+            app:enterAnim="@animator/fragment_fade_in"
+            app:exitAnim="@animator/fragment_fade_out"
+            app:popEnterAnim="@animator/fragment_fade_in"
+            app:popExitAnim="@animator/fragment_fade_out" />
+        <action
+            android:id="@+id/action_profileFragment_to_certificationFragment"
+            app:destination="@id/certificationFragment"
+            app:enterAnim="@animator/fragment_fade_in"
+            app:exitAnim="@animator/fragment_fade_out"
+            app:popEnterAnim="@animator/fragment_fade_in"
+            app:popExitAnim="@animator/fragment_fade_out"/>
+        <action
+            android:id="@+id/action_profileFragment_to_locationFragment"
+            app:destination="@id/locationFragment"
+            app:enterAnim="@animator/fragment_fade_in"
+            app:exitAnim="@animator/fragment_fade_out"
+            app:popEnterAnim="@animator/fragment_fade_in"
+            app:popExitAnim="@animator/fragment_fade_out"/>
+        <action
+            android:id="@+id/action_profileFragment_to_notificationsFragment"
+            app:destination="@id/notificationsFragment"
+            app:enterAnim="@animator/fragment_fade_in"
+            app:exitAnim="@animator/fragment_fade_out"
+            app:popEnterAnim="@animator/fragment_fade_in"
+            app:popExitAnim="@animator/fragment_fade_out"/>
+        <action
+            android:id="@+id/action_profileFragment_to_personalDataFragment"
+            app:destination="@id/personalDataFragment"
+            app:enterAnim="@animator/fragment_fade_in"
+            app:exitAnim="@animator/fragment_fade_out"
+            app:popEnterAnim="@animator/fragment_fade_in"
+            app:popExitAnim="@animator/fragment_fade_out"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.aurel.ecorescue.ui.account.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/standbyModeFragment"
+        android:name="com.aurel.ecorescue.ui.account.StandbyModeFragment"
+        android:label="fragment_standby_mode"
+        tools:layout="@layout/fragment_standby_mode" />
+
+    <fragment
+        android:id="@+id/aboutMeineStadtRettetFragment"
+        android:name="com.aurel.ecorescue.ui.information.AboutMeineStadtRettetFragment"
+        android:label="fragment_about_MeineStadtRettet"
+        tools:layout="@layout/fragment_about_MeineStadtRettet" />
+
+    <fragment
+        android:id="@+id/faqFragment"
+        android:name="com.aurel.ecorescue.ui.information.FAQFragment"
+        android:label="fragment_faq"
+        tools:layout="@layout/fragment_faq" />
+
+    <fragment
+        android:id="@+id/contactImprintFragment"
+        android:name="com.aurel.ecorescue.ui.information.ContactImprintFragment"
+        android:label="fragment_contact_imprint"
+        tools:layout="@layout/fragment_contact_imprint" />
+
+    <fragment
+        android:id="@+id/legalNoticeFragment"
+        android:name="com.aurel.ecorescue.ui.information.LegalNoticeFragment"
+        android:label="fragment_legal_notice"
+        tools:layout="@layout/fragment_legal_notice" />
+
+
+    <fragment
+        android:id="@+id/agreementFragment"
+        android:name="com.aurel.ecorescue.ui.account.agreement.AgreementFragment"
+        android:label="fragment_agreement"
+        tools:layout="@layout/fragment_agreement" >
+        <action
+            android:id="@+id/action_agreementFragment_to_agreementSignFragment"
+            app:destination="@id/agreementSignFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/accessFragment"
+        android:name="com.aurel.ecorescue.ui.account.AccessFragment"
+        android:label="fragment_access"
+        tools:layout="@layout/fragment_access" >
+        <action
+            android:id="@+id/action_accessFragment_self"
+            app:destination="@id/accessFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/accessFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/certificationFragment"
+        android:name="com.aurel.ecorescue.ui.account.certificates.CertificationFragment"
+        android:label="fragment_certification"
+        tools:layout="@layout/fragment_certification" >
+        <action
+            android:id="@+id/action_certificationFragment_to_frCertificationFragment"
+            app:destination="@id/frCertificationFragment"
+            app:enterAnim="@animator/fragment_fade_in"
+            app:exitAnim="@animator/fragment_fade_out"
+            app:popEnterAnim="@animator/fragment_fade_in"
+            app:popExitAnim="@animator/fragment_fade_out"/>
+        <action
+            android:id="@+id/action_certificationFragment_to_otherCertificationFragment"
+            app:destination="@id/otherCertificationFragment" />
+        <action
+            android:id="@+id/action_certificationFragment_to_addCertificationFragment"
+            app:destination="@id/addCertificationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/frCertificationFragment"
+        android:name="com.aurel.ecorescue.ui.account.certificates.FRCertificationFragment"
+        android:label="fragment_certification_fr"
+        tools:layout="@layout/fragment_certification_fr" />
+    <fragment
+        android:id="@+id/otherCertificationFragment"
+        android:name="com.aurel.ecorescue.ui.account.certificates.OtherCertificationFragment"
+        android:label="fragment_certification_other"
+        tools:layout="@layout/fragment_certification_other" />
+    <fragment
+        android:id="@+id/addCertificationFragment"
+        android:name="com.aurel.ecorescue.ui.account.certificates.AddCertificationFragment"
+        android:label="fragment_certification_add"
+        tools:layout="@layout/fragment_certification_add" />
+    <fragment
+        android:id="@+id/locationFragment"
+        android:name="com.aurel.ecorescue.ui.account.LocationFragment"
+        android:label="fragment_location"
+        tools:layout="@layout/fragment_location" />
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="com.aurel.ecorescue.ui.account.NotificationsFragment"
+        android:label="fragment_notifications"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/personalDataFragment"
+        android:name="com.aurel.ecorescue.ui.account.PersonalDataFragment"
+        android:label="fragment_personal_data"
+        tools:layout="@layout/fragment_personal_data" />
+    <fragment
+        android:id="@+id/agreementSignFragment"
+        android:name="com.aurel.ecorescue.ui.account.agreement.AgreementSignFragment"
+        android:label="fragment_agreement_sign"
+        tools:layout="@layout/fragment_agreement_sign" />
+    <fragment
+        android:id="@+id/spontaneousHelperFragment"
+        android:name="com.aurel.ecorescue.ui.account.SpontaneousHelperFragment"
+        android:label="SpontaneousHelperFragment" />
+
+
+</navigation>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/focusLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent" >
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    app:subtitleTextColor="@color/icons"
+                    app:titleTextColor="@color/icons"
+                    app:theme="@style/ThemeToolbar"
+                    app:title="@string/pending_reports"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/colorPrimary"/>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_below="@id/appbar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:divider="@android:color/darker_gray"
+            android:dividerHeight="0.5dp" />
+
+        <View
+            android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/md_grey_400"/>
+</RelativeLayout>

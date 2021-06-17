@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name">First Responder INT App</string>
+
+    <!--Parse Backend-->
+    <!-- For the integration server notifications to work you need to change the google-services.json and AndroidManist. See git-->
+    <string name="parse_app_id" translatable="false">sfFzOxotpsdOHWJE3nMmD0erLgFoecttKvC9CzIM</string>
+    <string name="server_url" translatable="false">https://ecorescue.herokuapp.com/parse/</string>
+    <string name="client_key" translatable="false">sfu9ngGU6484iunUBZE357594fgfgFi</string>
+    <string name="gcm_sender_ID" translatable="false">158202947854</string>
+</resources>

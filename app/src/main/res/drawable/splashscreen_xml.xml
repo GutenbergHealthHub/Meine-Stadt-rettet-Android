@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@color/colorPrimary" />
+
+    <item >
+        <bitmap
+            android:gravity="center_vertical|center_horizontal"
+            android:src="@drawable/logo_v2"/>
+<!--            android:src="@drawable/logo_v2"/>-->
+    </item>
+
+    <item
+        android:bottom="66dp">
+        <bitmap
+            android:gravity="bottom|center_horizontal"
+            android:src="@drawable/ic_company_logo_88dp"/>
+
+    </item>
+
+</layer-list>

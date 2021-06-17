@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorPrimary">#304187</color>
+    <color name="colorSecondary">#98A0C4</color>
+    <color name="colorAccentLine">#6172A8</color>
+    <color name="colorPrimaryDark">#212d5e</color>
+    <color name="colorAccent">#FF4081</color> <!-- pink A200 -->
+    <color name="colorGreen">#5ef959</color>
+    <color name="colorGreenDark">#17c912</color>
+    <color name="colorRed">#f90804</color>
+    <color name="colorRedDark">#b70f0c</color>
+    <color name="colorGrey">#d2d2d2</color>
+    <color name="colorDarkGrey">#a4a1a1</color>
+    <color name="settings_background">#f5f5f5</color>
+    <color name="colorBlack">#1e1e1c</color>
+    <color name="colorCyan">#26b2ed</color>
+    <color name="colorYellow">#fffb05</color>
+    <color name="colorYellowDark">#e6e32e</color>
+    <color name="colorOrange">#fca70a</color>
+    <color name="colorPrimaryTab">#125688</color>
+    <color name="colorPrimaryDarkTab">#125688</color>
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="navigationBarColor">#000000</color>
+    <color name="colorAccentTab">#c8e8ff</color>
+    <color name="whiteTransparent">#DEFFFFFF</color>
+    <color name="whiteTransparent50">#80FFFFFF</color>
+    <color name="colorProfile">#a39f9f</color>
+    <color name="colorAttention">@color/md_red_400</color>
+
+
+    <!-- TODO: Material Colors -->
+    <color name="primary">#3F51B5</color>
+    <color name="primary_dark">#303F9F</color>
+    <color name="primary_light">#C5CAE9</color>
+    <color name="accent">#FF5252</color>
+    <color name="primary_text">#000000</color>
+    <color name="secondary_text">#757575</color>
+    <color name="single_line_text">#212121</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="warning_red">@color/md_red_500</color>
+    <color name="divider">#BDBDBD</color>
+
+
+    <!-- ASB -->
+    <color name="asbYellow">#fffb05</color>
+    <color name="asbYellowHint">#e6e32e</color>
+    <color name="asbYellowDark">#fca70a</color>
+</resources>

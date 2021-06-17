@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+            <item android:bottom="0dp" android:left="0dp" android:right="0dp" android:top="0dp">
+                <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval">
+
+                    <solid android:color="?colorPrimary" />
+
+                    <stroke android:width="2dp" android:color="@color/colorRed" />
+                </shape>
+            </item>
+            <item android:bottom="7dp" android:left="7dp" android:right="7dp" android:top="7dp">
+                <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval">
+
+                    <solid android:color="?colorPrimary" />
+
+                    <stroke android:width="2dp" android:color="@color/colorDarkGrey" />
+                    <size android:width="120dp" android:height="120dp" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+    <item>
+        <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+            <item>
+                <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval">
+
+                    <solid android:color="#33000000" />
+                </shape>
+            </item>
+            <item android:bottom="6dp" android:left="6dp" android:right="6dp" android:top="6dp">
+                <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval">
+
+                    <solid android:color="?colorPrimary" />
+
+                    <stroke android:width="2dp" android:color="@color/colorRed" />
+                </shape>
+            </item>
+            <item android:bottom="13dp" android:left="13dp" android:right="13dp" android:top="13dp">
+                <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval">
+
+                    <solid android:color="?colorPrimary" />
+
+                    <stroke android:width="2dp" android:color="@color/colorDarkGrey" />
+                    <size android:width="120dp" android:height="120dp" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

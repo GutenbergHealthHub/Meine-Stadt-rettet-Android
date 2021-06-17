@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        app:elevation="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            app:subtitleTextColor="@color/icons"
+            app:titleTextColor="@color/icons"
+            app:theme="@style/ThemeToolbar"
+            app:title="@string/spontaneous_helper_notification"
+            app:navigationIcon="@drawable/ic_menu_white_24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:autoSizeTextType="uniform"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/icons" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_note"
+        android:background="@color/colorPrimary"
+        android:paddingBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+        <ImageView
+            android:id="@+id/iv_off_duty"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:contentDescription="@string/unknown"
+            android:src="@drawable/ic_hilfe"
+            android:tint="@color/icons" />
+
+        <TextView
+            android:id="@+id/tv_note"
+            style="@style/TextAppearance"
+            android:textSize="@dimen/text_single_line"
+            android:textColor="@color/icons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/iv_off_duty"
+            app:autoSizeTextType="uniform"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:text="@string/spontaneous_helper_info" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TextAppearance"
+                android:textSize="@dimen/text_title_large"
+                android:textColor="@color/primary_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:text="@string/i_would_like_to_get_notified" />
+
+            <CheckBox
+                android:id="@+id/cb_elderly_care"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginStart="13dp"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                style="@style/TextAppearance"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/text_title_medium"
+                android:text="@string/elderly_care" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                style="@style/TextAppearance"
+                android:textSize="@dimen/text_subtitle_medium"
+                android:textColor="@color/secondary_text"
+                android:text="@string/elderly_care_eg" />
+
+            <CheckBox
+                android:id="@+id/cb_support_for_ambulance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginStart="13dp"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                style="@style/TextAppearance"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/text_title_medium"
+                android:text="@string/support_for_ambulance_service" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                style="@style/TextAppearance"
+                android:textSize="@dimen/text_subtitle_medium"
+                android:textColor="@color/secondary_text"
+                android:text="@string/support_for_ambulance_service_eg" />
+
+            <CheckBox
+                android:id="@+id/cb_physically_difficult_task"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginStart="13dp"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                style="@style/TextAppearance"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/text_title_medium"
+                android:text="@string/physically_difficult_task" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                style="@style/TextAppearance"
+                android:textSize="@dimen/text_subtitle_medium"
+                android:textColor="@color/secondary_text"
+                android:text="@string/physically_difficult_task_eg" />
+
+            <CheckBox
+                android:id="@+id/cb_general"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginStart="13dp"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                style="@style/TextAppearance"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/text_title_medium"
+                android:text="@string/general_spontaneous_assistance" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                style="@style/TextAppearance"
+                android:textSize="@dimen/text_subtitle_medium"
+                android:textColor="@color/secondary_text"
+                android:text="@string/general_spontaneous_assistance_eg" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

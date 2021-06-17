@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        app:elevation="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            app:subtitleTextColor="@color/icons"
+            app:titleTextColor="@color/icons"
+            app:theme="@style/ThemeToolbar"
+            app:title="@string/standby"
+            app:navigationIcon="@drawable/ic_menu_white_24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_below="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/icons" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_note"
+        android:layout_below="@+id/view"
+        android:background="@color/colorPrimary"
+        android:paddingBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+        <ImageView
+            android:id="@+id/iv_off_duty"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:contentDescription="@string/unknown"
+            android:src="@drawable/ic_access_time_white_24dp"
+            android:tint="@color/icons" />
+
+        <TextView
+            android:id="@+id/tv_note"
+            style="@style/TextAppearance"
+            android:textSize="@dimen/text_single_line"
+            android:textColor="@color/icons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/iv_off_duty"
+            app:autoSizeTextType="uniform"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:text="@string/please_enter_your_off_duty_times_here" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_off_duty_time"
+        style="@style/TextAppearance"
+        android:textSize="@dimen/text_title_medium"
+        android:textColor="@color/primary_text"
+        android:layout_below="@id/rl_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:text="@string/off_duty_time" />
+
+    <TextView
+        android:id="@+id/tv_select_the_time"
+        style="@style/TextAppearance"
+        android:textSize="@dimen/text_subtitle_medium"
+        android:textColor="@color/secondary_text"
+        android:layout_below="@+id/tv_off_duty_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:text="@string/select_the_time" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_time"
+        android:layout_below="@+id/tv_select_the_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_off_duty_time_from"
+            android:focusable="true"
+            android:clickable="true"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:padding="5dp"
+            android:background="@drawable/msr_edit_text"
+            style="@style/TextAppearance"
+            android:textColor="@color/single_line_text"
+            android:textSize="@dimen/text_single_line"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/tv_off_duty_time_to"
+            android:focusable="true"
+            android:clickable="true"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:padding="5dp"
+            android:background="@drawable/msr_edit_text"
+            style="@style/TextAppearance"
+            android:textColor="@color/single_line_text"
+            android:textSize="@dimen/text_single_line"
+            android:text="" />
+
+        <ImageButton
+            android:id="@+id/ibtn_cancel_off_duty_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            app:srcCompat="@android:drawable/ic_menu_close_clear_cancel"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/cancel" />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_select_no_emergency_days"
+        android:layout_below="@+id/ll_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        style="@style/TextAppearance"
+        android:textSize="@dimen/text_subtitle_medium"
+        android:textColor="@color/secondary_text"
+        android:text="@string/select_days_no_emergency" />
+
+    <TextView
+        android:id="@+id/tv_no_emergency_days"
+        android:layout_below="@+id/tv_select_no_emergency_days"
+        android:focusable="true"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:padding="5dp"
+        android:drawableEnd="@drawable/ic_arrow_right_gray"
+        android:background="@drawable/msr_edit_text"
+        style="@style/TextAppearance"
+        android:textColor="@color/single_line_text"
+        android:textSize="@dimen/text_single_line"
+        android:text="" />
+
+    <CheckBox
+        android:id="@+id/cb_do_not_notify_at_home"
+        android:layout_below="@+id/tv_no_emergency_days"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        style="@style/TextAppearance"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/text_title_medium"
+        android:text="@string/do_not_notify_me_at_home" />
+
+    <TextView
+        android:id="@+id/tv_you_wont_receive_emergency_at_home"
+        android:layout_below="@+id/cb_do_not_notify_at_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        style="@style/TextAppearance"
+        android:textSize="@dimen/text_subtitle_medium"
+        android:textColor="@color/secondary_text"
+        android:text="@string/you_wont_receive_emergency_calls_at_home" />
+
+
+</RelativeLayout>

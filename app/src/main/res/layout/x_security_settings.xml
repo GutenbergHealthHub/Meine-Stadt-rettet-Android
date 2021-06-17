@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/section_line"
+            android:background="@color/colorGrey" />
+
+        <TextView
+            android:id="@+id/password_settings"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/btn_click"
+            android:gravity="center_vertical"
+            android:onClick="changePassword"
+            android:paddingStart="@dimen/activity_horizontal_margin"
+            android:text="@string/change_password"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/textViewText" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginStart="20dp"
+            android:background="@color/colorGrey" />
+
+
+        <TextView
+            android:id="@+id/pin_settings"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/btn_click"
+            android:gravity="center_vertical"
+            android:onClick="changePin"
+            android:paddingStart="@dimen/activity_horizontal_margin"
+            android:text="@string/change_pin"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/textViewText" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/in_section_line"
+            android:layout_marginStart="@dimen/in_section_margin"
+            android:background="@color/colorGrey" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/touchId_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_click"
+                android:paddingStart="@dimen/activity_horizontal_margin"
+                android:text="@string/use_touchid"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textViewText" />
+
+            <Switch
+                android:id="@+id/settings_touch_id_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/touchId_settings"
+                android:layout_alignBottom="@+id/touchId_settings"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="18dp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/section_line"
+            android:background="@color/colorGrey" />
+
+    </LinearLayout>
+
+</LinearLayout>

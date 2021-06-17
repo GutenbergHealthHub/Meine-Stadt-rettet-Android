@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/dialog_rdy_info"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+
+    <ImageView
+        android:id="@+id/image_navigate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/info"
+        android:layout_below="@+id/info"
+        android:layout_marginTop="16dp"
+        app:srcCompat="@drawable/ic_navigate" />
+
+    <ImageView
+        android:id="@+id/image_walk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/image_navigate"
+        android:layout_below="@+id/image_navigate"
+        android:layout_marginTop="16dp"
+        app:srcCompat="@drawable/ic_walk" />
+
+    <TextView
+        android:id="@+id/distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/image_navigate"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@+id/image_navigate"
+        android:text=" \? km"
+        android:gravity="center"
+        android:layout_above="@+id/image_walk" />
+
+    <TextView
+        android:id="@+id/duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/image_walk"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@+id/image_walk"
+        android:text=" \? min"
+        android:gravity="center"
+        android:layout_alignBottom="@+id/image_walk" />
+</RelativeLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content_agreement_sign"
+    android:visibility="visible"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="?colorPrimary"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/ic_contract"
+            android:tint="@color/icons"
+            android:contentDescription="@string/content_description_null" />
+
+        <TextView
+            android:id="@+id/instructions"
+            style="@style/Text_H3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="8dp"
+            android:text="@string/signature_explanation"
+            android:textColor="@color/icons" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <com.github.gcacace.signaturepad.views.SignaturePad
+            android:id="@+id/signature_pad"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:background="@color/colorWhite" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/clear_signature"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:textAllCaps="false"
+            android:layout_gravity="bottom"
+            android:textColor="@color/md_black_1000"
+            android:background="@color/md_blue_grey_400"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@string/clear" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/save_signature"
+            android:textColor="@color/icons"
+            android:textSize="@dimen/text_button"
+            android:layout_gravity="bottom"
+            style="@style/Widget.MaterialComponents.Button"
+            android:textAllCaps="false"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@string/agreement_save_and_sign" />
+
+    </LinearLayout>
+</LinearLayout>

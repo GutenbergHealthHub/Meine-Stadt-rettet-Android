@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/focusLayout"
+    style="@style/Layout_Dark"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    tools:context=".view.protocols.ProtocolActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/view_padding"
+        android:paddingTop="4dp"
+        android:paddingEnd="@dimen/view_padding"
+        android:paddingBottom="4dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="18sp"
+            android:textColor="@color/icons"
+            android:gravity="center_vertical"
+            android:text="@string/emergency_operation_protocol" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            app:strokeColor="@color/icons"
+            android:textAllCaps="false"
+            android:textColor="@color/icons"
+            android:layout_width="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="@string/save"
+            tools:ignore="RelativeOverlap"
+            android:onClick="saveTemporary"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/icons" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/view_padding"
+        android:paddingEnd="@dimen/view_padding">
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/MSR_TextView_White"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="TopicTitle"
+            android:textColor="@color/icons"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMaxTextSize="18sp"
+            tools:ignore="HardcodedText,UnusedAttribute" />
+
+        <TextView
+            android:id="@+id/description"
+            style="@style/MSR_TextView_White"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/icons"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMaxTextSize="14sp"
+            android:text="Long text of topic description"
+            tools:ignore="HardcodedText,UnusedAttribute" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/progressBarTopDone"
+            android:layout_width="0dp"
+            android:layout_height="4dp"
+            android:layout_weight="0.0"
+            android:background="@color/icons" />
+
+        <View
+            android:id="@+id/progressBarTopTodo"
+            android:layout_width="0dp"
+            android:layout_height="4dp"
+            android:layout_weight="1.0"
+            android:background="#E4E8F4" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0"
+        android:background="#F0EFF5"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/pageMultiSelectionList"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+            <Space style="@style/MSR_Space_Linear" />
+
+            <Space style="@style/MSR_Space_Linear" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="#D1D1D1" />
+
+            <LinearLayout
+                android:id="@+id/contentArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="#D1D1D1" />
+
+            <Space style="@style/MSR_Space_Linear" />
+            <Space style="@style/MSR_Space_Linear" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pageArrivedAt"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <Space style="@style/MSR_Space_Linear" />
+            <Space style="@style/MSR_Space_Linear" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="#D1D1D1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/emergency_accepted"
+                    android:textColor="@color/md_blue_grey_200"/>
+                <TextView
+                    android:id="@+id/emergencyAcceptedLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/md_blue_grey_200"
+                    android:textSize="14sp"/>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:background="#D1D1D1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/emergency_finished"
+                    android:textColor="@color/md_blue_grey_200"/>
+                <TextView
+                    android:id="@+id/emergencyFinishedLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/md_blue_grey_200"
+                    android:textSize="14sp"/>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:background="#D1D1D1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/emergency_state_location" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:text="@string/selected_date_label"/>
+
+                    <TextView
+                        android:id="@+id/selectedDate"
+                        android:layout_marginStart="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:text="@string/not_yet_selected"/>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end">
+                        <com.google.android.material.button.MaterialButton
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorPrimary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:text="@string/emergency_date"
+                            android:onClick="showDatePicker"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:text="@string/selected_time_label"/>
+
+                    <TextView
+                        android:id="@+id/selectedTime"
+                        android:layout_marginStart="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:text="@string/not_yet_selected"/>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end">
+                        <com.google.android.material.button.MaterialButton
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorPrimary"
+                            android:layout_marginTop="4dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:text="@string/time"
+                            android:onClick="showTimePicker"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="#D1D1D1" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/pageFreeText"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:background="#F0EFF5"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_margin="10dp">
+
+            <Space style="@style/MSR_Space_Linear" />
+
+            <com.aurel.ecorescue.view.components.MultiLineEditTextWithDone
+                android:id="@+id/longtext"
+                android:inputType="textMultiLine"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="50dp"
+                android:background="@drawable/msr_border_black"
+                android:padding="4dp"
+                android:gravity="top"
+                android:maxLength="1000"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                style="@style/Widget.MaterialComponents.Button"
+                android:textAllCaps="false"
+                android:textColor="@color/icons"
+                android:textStyle="normal"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/button_save_protocol_and_save"
+                tools:ignore="RelativeOverlap"
+                android:layout_alignParentBottom="true"
+                android:onClick="createProtocol"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/progressBarBottomDone"
+            android:layout_width="0dp"
+            android:layout_height="4dp"
+            android:layout_weight="0.0"
+            android:background="@color/icons" />
+
+        <View
+            android:id="@+id/progressBarBottomTodo"
+            android:layout_width="0dp"
+            android:layout_height="4dp"
+            android:layout_weight="1.0"
+            android:background="#E4E8F4" />
+    </LinearLayout>
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/view_padding"
+        android:paddingTop="4dp"
+        android:paddingEnd="@dimen/view_padding"
+        android:paddingBottom="4dp"
+        android:stretchColumns="1">
+
+        <TableRow tools:ignore="UselessParent">
+
+            <TextView
+                android:id="@+id/previousPageButton"
+                style="@style/MSR_TextView_White"
+                android:layout_width="fill_parent"
+                android:layout_height="38dp"
+                android:gravity="center_vertical"
+                android:onClick="previousPage"
+                android:textColor="@color/icons"
+                android:text="@string/back_button" />
+
+            <TextView
+                android:id="@+id/pageIndicator"
+                style="@style/MSR_TextView_White"
+                android:layout_width="fill_parent"
+                android:layout_height="38dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/icons"
+                android:text="X/Y"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/nextPageButton"
+                style="@style/MSR_TextView_White"
+                android:layout_width="fill_parent"
+                android:layout_height="38dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/icons"
+                android:onClick="nextPage"
+                android:text="@string/continue_button" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

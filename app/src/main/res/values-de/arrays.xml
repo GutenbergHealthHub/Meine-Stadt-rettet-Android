@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="qualifications">
+        <item>@string/qualifications_1</item>
+        <item>@string/qualifications_2</item>
+        <item>@string/qualifications_3</item>
+        <item>@string/qualifications_4</item>
+        <item>@string/qualifications_5</item>
+        <item>@string/qualifications_6</item>
+        <item>@string/qualifications_7</item>
+        <item>@string/qualifications_8</item>
+    </string-array>
+
+
+    <string-array name="jobs">
+        <item>@string/job_1</item>
+        <item>@string/job_2</item>
+        <item>@string/job_3</item>
+        <item>@string/job_4</item>
+        <item>@string/job_5</item>
+        <item>@string/job_6</item>
+        <item>@string/job_7</item>
+        <item>@string/job_8</item>
+        <item>@string/job_9</item>
+        <item>@string/job_10</item>
+        <item>@string/job_11</item>
+        <item>@string/job_12</item>
+        <item>@string/job_13</item>
+        <item>@string/job_14</item>
+        <item>@string/job_15</item>
+    </string-array>
+
+    <string-array name="mobile_aed">
+        <item>@string/yes</item>
+        <item>@string/no</item>
+    </string-array>
+</resources>

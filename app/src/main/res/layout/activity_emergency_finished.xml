@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".view.x_emergency.EmergencyFinishedActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/view_padding">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/ic_action_done"
+            android:tint="@color/colorDarkGrey"
+            android:contentDescription="@string/app_name" />
+
+        <Space style="@style/MSR_Space_Linear" />
+        <TextView
+            android:textColor="@color/colorBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/thanks_for_your_help"
+            android:gravity="center"
+            android:textStyle="bold"/>
+        <Space style="@style/MSR_Space_Linear" />
+        <TextView
+            android:textColor="@color/colorBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/activity_emergenc_finished_text"
+            android:gravity="center"/>
+        <Space style="@style/MSR_Space_Linear" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom|center"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:textAllCaps="false"
+                android:textSize="@dimen/text_button"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@string/button_report_later"
+                android:layout_marginBottom="10dp"
+                android:onClick="finishActivity"/>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button"
+                android:textColor="@color/icons"
+                android:textAllCaps="false"
+                android:textSize="@dimen/text_button"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@string/button_report"
+                android:onClick="fillReport"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".view.x_emergency.ExpiredEmergencyActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?colorPrimary"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/view_padding">
+
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/logo_v2"
+            android:contentDescription="@string/app_name" />
+
+        <Space style="@style/MSR_Space_Linear" />
+
+        <TextView
+            android:textColor="@color/colorAttention"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/expired_emergency"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/emergency_date"
+            android:textColor="@color/colorAttention"
+            style="@style/MSR_TextView_Attention"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="01.01.1990 00:00"
+            tools:ignore="HardcodedText"
+            android:textSize="@dimen/text_small"/>
+
+        <Space style="@style/MSR_Space_Linear" />
+        <Space style="@style/MSR_Space_Linear" />
+
+        <TextView
+            android:id="@+id/emergency_expired_message1"
+            style="@style/MSR_TextView_White"
+            android:textColor="@color/icons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/emergency_expired_message1" />
+
+        <Space style="@style/MSR_Space_Linear" />
+
+        <TextView
+            android:id="@+id/emergency_expired_message2"
+            style="@style/MSR_TextView_White"
+            android:textColor="@color/icons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/emergency_expired_message2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom|center"
+            android:orientation="vertical">
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button"
+                app:backgroundTint="@color/colorWhite"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                app:strokeColor="@color/icons"
+                android:textColor="@color/accent"
+                android:textSize="@dimen/text_button"
+                android:text="@string/back_button"
+                android:onClick="finishActivity"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".view.x_emergency.PinCheckActivity">
+<!--    android:focusable="true"-->
+<!--    android:clickable="true"-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?colorPrimary"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/view_padding">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_centerVertical="true"
+                android:background="@color/icons" />
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="?colorPrimary"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/logo_v2"
+                    android:contentDescription="@string/app_name" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <Space style="@style/MSR_Space_Linear" />
+
+        <Space style="@style/MSR_Space_Linear" />
+
+        <TextView
+            style="@style/MSR_TextView_White"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/icons"
+            android:text="@string/pin_required_description" />
+
+        <Space style="@style/MSR_Space_Linear" />
+        <Space style="@style/MSR_Space_Linear" />
+
+        <LinearLayout
+            android:id="@+id/pinIndicator"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="?colorPrimary"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <View
+                style="@style/MSR_Button_Block_Outline_White"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content" />
+
+            <View
+                style="@style/MSR_Button_Block_Outline_White"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp" />
+
+            <View
+                style="@style/MSR_Button_Block_Outline_White"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp" />
+
+            <View
+                style="@style/MSR_Button_Block_Outline_White"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp" />
+
+            <View
+                style="@style/MSR_Button_Block_Outline_White"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp" />
+
+            <View
+                style="@style/MSR_Button_Block_Outline_White"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/pin_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:cursorVisible="false"
+            android:inputType="numberPassword"
+            android:maxLength="6"
+            android:textColor="@android:color/transparent"
+            android:importantForAutofill="no" />
+
+        <ImageButton
+            android:id="@+id/fingerprintImageButton"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:scaleType="fitXY"
+            android:background="@android:color/transparent"
+            android:onClick="activateFingerprint"
+            android:src="@drawable/ic_fingerprint_black_24dp"
+            android:contentDescription="@string/content_description_null" />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

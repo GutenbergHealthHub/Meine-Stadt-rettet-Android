@@ -1,0 +1,1080 @@
+<resources>
+
+    <!--App Data-->
+    <string name="app_name">First Responder App</string>
+    <string name="app_package" translatable="false">com.aurel.ecorescue</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">MapsKey</string>
+    <string name="google_maps_key_web" templateMergeStrategy="preserve" translatable="false">MapsKeyWeb</string>
+    <string name="emergency_broadcast" translatable="false">de.ecorescue.emergency</string>
+
+    <!--Parse Backend New Server-->
+    <string name="parse_app_id" translatable="false">ParseAppId</string>
+    <string name="server_url" translatable="false">ParseServerURL</string>
+    <string name="client_key" translatable="false">ParseClientKey</string>
+
+    <!--Parse Backend-->
+    <string name="gcm_sender_ID" translatable="false">gcm_sender_ID</string>
+    <string name="gcm_sender" translatable="false">id:gcm_sender_ID</string>
+
+    <!--Basics-->
+    <string name="continue_button">Continue</string>
+    <string name="ok" translatable="false">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="hint_number">No.</string>
+    <string name="back_button">Back</string>
+    <string name="please_wait">Please wait</string>
+    <string name="error">Error</string>
+    <string name="in_progress">in progress</string>
+    <string name="fingerprint_activated">Please authenticate with your fingerprint now.</string>
+
+    <!--NavigationDrawer-->
+    <string name="drawer_header_status">Status: </string>
+
+    <string name="drawer_home">Home Page</string>
+    <string name="drawer_map">AED Map</string>
+    <string name="drawer_news">News</string>
+    <string name="drawer_courses">Courses</string>
+    <string name="drawer_account">Account</string>
+    <string name="drawer_account_profile">Profile</string>
+    <string name="drawer_account_settings">Settings</string>
+    <string name="drawer_account_standby">Standby Mode</string>
+    <string name="drawer_about">About the app</string>
+    <string name="drawer_about_faq">FAQ</string>
+    <string name="drawer_about_contact">Contact &amp; Imprint</string>
+    <string name="drawer_about_legal">Legal notice</string>
+
+    <string name="drawer_login">Login</string>
+
+    <!--Profile-->
+    <string name="profile">Profile</string>
+
+    <!--Main Activity-->
+    <string name="statistic_title">Summary: missions</string>
+    <string name="emergency_state_accepted">Accepted</string>
+    <string name="emergency_state_location">Arrived at location</string>
+    <string name="emergency_state_canceled">Canceled</string>
+    <string name="emergency_state_report_finished">Finished</string>
+
+    <!--Map-->
+    <string name="map_menu_filter" translatable="false">Filter</string>
+    <string name="map_filter_title" translatable="false">Filter</string>
+    <string name="map_filter_hospital">Hospital</string>
+    <string name="map_filter_pharmacy">Pharmacy</string>
+    <string name="map_filter_defibrilator">AED</string>
+    <string name="map_filter_fire">Fire department</string>
+    <string name="map_filter_doctor">Doctor</string>
+    <string name="map_filter_dentist">Dentist</string>
+
+
+    <!--Emergency-->
+    <string name="emergency">Emergency</string>
+    <string name="emergency_location">Emergency Location</string>
+    <string name="title_emergency">Emergency</string>
+    <string name="emergency_tab_info">Info</string>
+    <string name="emergency_tab_map">Map</string>
+    <string name="adress_label">Address</string>
+    <string name="patient_label">Patient Name</string>
+    <string name="info_label">Description</string>
+    <string name="emergencyid_label">Emergency Number</string>
+    <string name="emergency_accept">Accept</string>
+    <string name="emergency_accepted">Emergency accepted</string>
+    <string name="emergency_finished">Emergency finished</string>
+    <string name="emergency_accept_new">Accept Emergency</string>
+    <string name="emergency_cancel">Cancel Emergency</string>
+    <string name="emergency_finish">Finish Emergency</string>
+    <string name="emergency_finished_report">Write report</string>
+    <string name="emergency_finish_info">Do you wish to cancel or finish the emergency?</string>
+    <string name="emergency_finish_finish">Finish Emergency</string>
+    <string name="no_missing_reports">There are currently no reports that need to be filled out.</string>
+    <string name="call_controlcenter">Call Control Center</string>
+    <string name="timeline">Timeline</string>
+    <string name="timeline_recieved">Emergency recieved: %1s</string>
+    <string name="timeline_created">Emergency created: %1s</string>
+    <string name="timeline_ready">Ready for emergency: %1s</string>
+    <string name="timeline_accepted">Emergency accepted: %1s</string>
+    <string name="timeline_arrived">Arrived at location: %1s</string>
+    <string name="timeline_finished">Emergency finished: %1s</string>
+    <string name="timeline_canceld">Emergency canceled: %1s</string>
+    <string name="dialog_rdy_title">Emergency Alert</string>
+    <string name="dialog_rdy_info">Are you ready to assist in this emergency mission?</string>
+    <string name="notification_emergency_info">An emergency occured around.</string>
+    <string name="app_is_running_in_background_title">Background process started</string>
+    <string name="app_is_running_in_background_content">Connection to the virtual dispatch center established.</string>
+    <string name="notification_cancel_title">Emergency cancelled</string>
+    <string name="notification_cancel_message">Your current emergency was cancelled.</string>
+    <string name="emergency_cancelled_info">The emergency was cancelled by the control center.</string>
+
+
+    <!--<string name="dialog_rdy_info">Are you ready to assist in this emergency mission?-->
+    <!--\nIt is %1$.1f km away. By foot you need %2$d minutes.-->
+    <!--\n%3$s-->
+    <!--</string>-->
+    <string name="dialog_rdy_Accept">I am ready to help!</string>
+    <string name="dialog_rdy_timeAvailable">%ds still active</string>
+    <string name="dialog_rdy_timeExpired">Expired</string>
+    <string name="notification_track_title">Tracking your location</string>
+    <string name="notification_track_info">While you are on your way to an emergency, your location is transmitted to the control center.</string>
+    <string name="emergency_received">Emergency received!</string>
+    <string name="emergency_distance_in_m">Emergency in %1$dm</string>
+    <string name="emergency_distance">%1$.1f km away</string>
+    <string name="emergency_distancedialog">%1$.1f km</string>
+    <string name="emergency_durationdialog" translatable="false">%1$d min</string>
+    <string name="emergency_active">Emergency mission active!</string>
+    <string name="emergency_distance_no_gps">Activate GPS to determine distance.</string>
+    <string name="emergency_expired_message1">You received an emergency  %1$d minutes ago.</string>
+    <string name="emergency_expired_message2">Unfortunately you have not responded to this emergency within %1$d minutes. The emergency has expired for you.</string>
+
+
+    <!--Information Items-->
+    <string name="title_activity_information_item_tab">News</string>
+    <string name="news_tab_news">News</string>
+    <string name="news_tab_events">Events</string>
+    <string name="continue_reading">Continue reading</string>
+
+    <!--Create Defibrillator-->
+    <string name="name" translatable="false">Name</string>
+    <string name="search_for_place">Search for address</string>
+    <string name="hint_street">Street</string>
+    <string name="hint_plz" translatable="false">PLZ</string>
+    <string name="hint_city">City</string>
+    <string name="hint_desc">Description</string>
+    <string name="hint_title" translatable="false">Title</string>
+    <string name="photo">Photos</string>
+    <string name="upload_photo">Take a photo</string>
+    <string name="create_defi_info_title">Info</string>
+    <string name="create_defi_info">Only activated first responders are allowed to add new AEDs.</string>
+    <string name="create_defi_info_register">Register</string>
+    <string name="create_defi_info_status">Go to status</string>
+
+
+    <!--Profile-->
+    <string name="action_settings">Settings</string>
+    <string name="help_us">Help us!</string>
+    <string name="pin_input">Set Pin</string>
+    <string name="pin_input_description_1">The PIN must be 6 digits long</string>
+    <string name="pin_input_description_2">The PIN protects the app from unauthorized usage.</string>
+    <string name="pin_dialog">PIN-Code Abfrage</string>
+    <string name="certificate_settings">Certificate</string>
+    <string name="agreement_settings">Agreement</string>
+    <string name="agreement_notsigned_settings">Not signed</string>
+    <string name="agreement_signed_settings">Signed</string>
+    <string name="agreement_sub_settings">Edit Sub Agreements</string>
+
+    <string name="agreement_dialog_notloaded_msg">Error loading basic agreement. Please check your internet connection.</string>
+    <string name="agreement_dialog_info">The signed basis agreement entitles you to be active as a first responder in many regions of Germany and offer you insurance during your mission.</string>
+    <string name="agreement_dialog_info_sub">Sub Agreements are required due to different federal and provincial legislations. With your signature, you unlock additional regions while maintaining the same insurance cover. We encourage you to sign all available agreements.</string>
+    <string name="agreement_dialog_info_title">Why Basis Agreement?</string>
+    <string name="agreement_dialog_info_title_sub">Why Sub Agreement?</string>
+    <string name="sub_agreement">Sub Agreements</string>
+    <string name="agreement_sub_signed">Signed on %1$s.</string>
+    <string name="agreement_sub_notsigned">Not yet signed.</string>
+    <string name="agreement_sub_valid">This contract is valid till %1$s.</string>
+    <string name="agreement_save_and_sign">Save and send</string>
+
+    <string name="sign">Sign</string>
+    <string name="control_center">Control Center</string>
+    <string name="first_responder">First Responder</string>
+
+
+    <string name="personal_data_name">Name:</string>
+    <string name="personal_data_surname">Surname:</string>
+    <string name="personal_data_birthday">Birthday:</string>
+    <string name="personal_data_phone">Telephone Number:</string>
+
+    <!--Status Page-->
+    <string name="standby_title" translatable="false">Status</string>
+    <string name="standby_subtitle_inactive">You are not yet activated as a first responder.</string>
+    <string name="standby_subtitle_active">You are activated as an first responder.</string>
+    <string name="standby_stateinfo_inactive">You will not be notified in case of an emergency.</string>
+    <string name="standby_stateinfo_active">You will be notified in case of an emergency.</string>
+    <string name="standby_info">In order to receive emergencies you must comply with the following requirements:</string>
+    <string name="standby">Standby</string>
+    <string name="agreements">Agreements</string>
+    <string name="personal_information">Personal information</string>
+    <string name="personal_information_explanation">To establish a communication during an emergency mission the dispatch center requires  your full name and phone number.</string>
+    <string name="personal_information_complete">Complete</string>
+    <string name="personal_information_incomplete">Incomplete</string>
+    <string name="on_standby">On standby</string>
+    <string name="off_duty_until">paused until %1$s</string>
+    <string name="first_responder_certificate">First Responder certificate</string>
+    <string name="first_responder_certificate_state_inreview">In review</string>
+    <string name="first_responder_certificate_state_notsubmitted">Not yet submitted</string>
+    <string name="first_responder_certificate_state_reviewed">Reviewed</string>
+    <string name="info_certificate">Upload a photo of your medical certificate. This certificate will be reviewed by an employee before you are activated as a first responder. This can take up to 2 days.</string>
+    <string name="info_standby">Setup a standby time during you will not be notified about emergencies.</string>
+
+
+    <!--Registration / Login / Profile Edit-->
+    <string name="email_verification_failed">Please verify your email!</string>
+    <string name="wrong_credentials">Email or password entered is wrong!</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="sign_in">Login</string>
+    <string name="continue_without_registration">Continue without registration</string>
+    <string name="check">Check</string>
+    <string name="skip">Skip</string>
+    <string name="register">Register</string>
+    <string name="register_not_yet_registered">Not registered yet? Do it now</string>
+    <string name="login_forgot_password">Forgot password?</string>
+    <string name="click_here">Click here</string>
+    <string name="forgot_your_password_question">Have you forgot your password?</string>
+    <string name="password_repeat">Confirm</string>
+    <string name="repeat_password">Repeat password</string>
+    <string name="email_example">name@email.com</string>
+    <string name="registration_text_header">Registrierung</string>
+    <string name="registration_text">Geben Sie Ihre Zugangsdaten an und laden Sie Ihr
+    Ersthelfer-Zertifikat hoch - danach geht es los.</string>
+    <string name="your_information">Ihre Zugangsdaten</string>
+    <string name="your_name">Wie heißen Sie?</string>
+    <string name="first_name">Vorname</string>
+    <string name="last_name">Nachname</string>
+    <string name="user_name">First and Last name</string>
+    <string name="first_name_example">Max</string>
+    <string name="last_name_example">Mustermann</string>
+    <string name="registration_birthday">Your Birthday</string>
+    <string name="birthday">Birthday</string>
+    <string name="registration_birthday_hintyear">Click on the year to change it.</string>
+    <string name="gps_off">GPS not available!</string>
+    <string name="error_current_location">Failed to get current location. Make sure your GPS is activated.</string>
+    <string name="current_location">Aktueller Standort einfügen</string>
+    <string name="your_address">Address</string>
+    <string name="street_name">Straße</string>
+    <string name="street_number">Nummer</string>
+    <string name="zipcode">PLZ</string>
+    <string name="city_name">City</string>
+    <string name="street_name_example">Boltzmannstraße</string>
+    <string name="street_number_example">3</string>
+    <string name="zipcode_example">85748</string>
+    <string name="city_name_example">Garching</string>
+    <string name="telephone_number">Ihre Telefonnummer</string>
+    <string name="phone_number">Mobile</string>
+    <string name="germany_prefix" translatable="false">49</string>
+    <string name="phone_number_example">151 123456</string>
+    <string name="phone_number_explanation">Die Leitstelle benötigt die Telefonnummer, um Sie im Notfall kontaktieren zu können.</string>
+    <string name="qualifications_1">BLS-Course</string>
+    <string name="qualifications_2">FA-Course</string>
+    <string name="qualifications_3">Paramedic</string>
+    <string name="qualifications_4">Rescue Assistant/Emergency Paramedic</string>
+    <string name="qualifications_5">Doctor</string>
+    <string name="qualifications_6">Doctor with sub-specialty Emergency Medicine</string>
+    <string name="qualifications_7">Paramedic Training</string>
+    <string name="qualifications_8">Rescue worker</string>
+    <string name="job_1">Doctor</string>
+    <string name="job_2">Dentist</string>
+    <string name="job_3">Doctors Assistant</string>
+    <string name="job_4">Paramedic</string>
+    <string name="job_5">Rescue Assistant</string>
+    <string name="job_6">Police</string>
+    <string name="job_7">Fire Department (Professional)</string>
+    <string name="job_8">Fire Department (Volunteer)</string>
+    <string name="job_9">Nurse</string>
+    <string name="job_10">Aid Organisation</string>
+    <string name="job_11">Therapist</string>
+    <string name="job_12">Army</string>
+    <string name="job_13">Student</string>
+    <string name="job_14">Emergency Paramedic</string>
+    <string name="job_15">Other</string>
+    <string name="finish_registration">Registration finished</string>
+    <string name="finish_edit">Successfully updated your data</string>
+    <string name="finish_registration_description">We sent you an email.\nPlease verify your email address by clicking on the link in the email.</string>
+    <string name="send">Send</string>
+    <string name="return_to_main_view">Back</string>
+    <string name="upload_certificate">Upload certificate</string>
+    <string name="gallery">Gallery</string>
+    <string name="delete">Delete</string>
+    <string name="profile_updated">Profile successfully updated</string>
+
+    <!--Error-->
+    <string name="error_loading_data">Error loading data. Please check your internet connection.</string>
+    <string name="error_uploading_signature">Error uploading signature. Please try again later.</string>
+    <string name="error_uploading_certificate">Error uploading certificate. Please try again later.</string>
+
+
+    <string name="Defibrillators">AEDs</string>
+
+
+    <string name="out_of">von</string>
+
+
+    <string name="about">More about Meine-Stadt-rettet</string>
+
+    <string name="done_text">Abgeschlossene\n Einsatze</string>
+    <string name="ignore_text">Abgebrochene\n Einsatze</string>
+    <string name="pending_text">Ausstehende\nProtokolle</string>
+
+
+    <!--Touch ID-->
+    <string name="touch_ID">Use Touch-ID</string>
+    <string name="touch_settings">Optional.</string>
+    <string name="touch_id">use Touch-ID</string>
+    <string name="touch_description">Touch-ID offers an alternative authentication option to the PIN.</string>
+
+    <string name="snapPhoto">Take Photo</string>
+
+    <string name="my_notifications">Notfalleinsätze</string>
+    <string name="defibrillators">AEDs</string>
+    <string name="notActivatedYet">Certificate not checked yet</string>
+    <string name="emergency_histories">Einsatz-Historie</string>
+    <string name="emergency_history_subtitle">Alle Einsätze der letzen 30 Tage, inklusive nicht angenommener Einsätze.</string>
+
+    <!--IDENTIFICATION CARD-->
+    <string name="logo">hospital logo</string>
+    <string name="fax">Fax: </string>
+    <string name="telephone">Telephone: </string>
+    <string name="personal">Personal</string>
+    <string name="configuration">Configuration</string>
+    <string name="availability">Im Einsatz</string>
+    <string name="sound">Tone</string>
+    <string name="aboutApplication">About the App</string>
+    <string name="appVersion">App Version</string>
+    <string name="logOut">Log Out</string>
+    <string name="identification">Identification card</string>
+    <string name="failedTologout">Failed to log out!</string>
+    <string name="ongoingProtocol">Protokoll ausstehend</string>
+    <string name="hour">Uhr</string>
+
+    <!--Activate GPS-->
+    <string name="warning_header">GPS Settings</string>
+    <string name="warning_body">GPS is not enabled. Do you want to go to settings menu?</string>
+    <string name="settings">Settings</string>
+
+    <!--Connection Failed-->
+    <string name="conn_error">Connection Error!</string>
+    <string name="error_message">Failed to Retrieve AED Locations. Check you connectivity and try again!</string>
+
+    <string name="exit_app">Press Back again to Exit</string>
+
+
+    <!--Validation Errors-->
+    <string name="req_field">Required field!</string>
+    <string name="pass_missmatch">Passwords do not match!</string>
+    <string name="wrong_email_format">Please enter a valid email!</string>
+    <string name="not_a_number">Invalid characters!</string>
+    <string name="pin_length">Pin is too short!</string>
+    <string name="certificate_required">Certificate photo is required!</string>
+    <string name="pin_short">Pin must be 6 digits!</string>
+
+    <!--Personal settings-->
+    <string name="identity">Personal</string>
+
+    <string name="address">Address</string>
+    <string name="phone">Phone</string>
+
+    <string name="pin">Pin</string>
+    <string name="touchid">TOUCH-ID</string>
+    <string name="edit">Edit</string>
+    <string name="save">Save</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="no_address">Cannot get current address</string>
+    <string name="duty_time">Off duty time</string>
+    <string name="off_duty">Setup off duty time</string>
+    <string name="off_duty_info">If you setup off duty time, you will not get any alerts.</string>
+    <string name="active">Active</string>
+    <string name="inactive">Inactive</string>
+    <string name="state_off_duty">off duty</string>
+    <string name="sounds">Sounds</string>
+    <string name="horn" translatable="false">Horn</string>
+    <string name="horn2" translatable="false">Horn 2</string>
+    <string name="horn3" translatable="false">Horn 3</string>
+    <string name="horn4" translatable="false">Horn 4</string>
+    <string name="horn5" translatable="false">Horn 5</string>
+    <string name="horn6" translatable="false">Horn 6</string>
+    <string name="horn7" translatable="false">Horn 7</string>
+    <string name="horn8" translatable="false">Horn 8</string>
+    <string name="horn9" translatable="false">Horn 9</string>
+    <string name="siren">Siren</string>
+    <string name="sound_info">The sound will play in case of an alarm.</string>
+    <string name="no_internet">No Connection Available</string>
+    <string name="next_emergency">Annehmen</string>
+    <string name="are_you_available">Are you ready to accept the emergency?</string>
+    <string name="emergency_question">Sind Sie in der Lage, bei diesem Einsatz mitzuhelfen?</string>
+    <string name="ready">Ich bin bereit!</string>
+    <string name="emergency_title">Notfalleinsatz</string>
+    <string name="emergency_subtitle">Tipen für mehr Infos</string>
+    <string name="fill_report">Fill out report</string>
+    <string name="ended_emergency">You ended the emergency</string>
+    <string name="emergency_description">Description:</string>
+    <string name="emergency_info">TIME INFORMATION</string>
+    <string name="emergency_started">Started at</string>
+    <string name="emergency_date">Date</string>
+    <string name="emergency_ended">Ended at</string>
+    <string name="emergency_duration">Duration</string>
+    <string name="new_emergency">Emergency near your location.</string>
+    <string name="wrong_pin">Wrong Pin</string>
+    <string name="new_emergency_title">Notfall</string>
+
+
+    <!--Protocol string resources-->
+    <string name="mission_protocol">Mission protocol</string>
+    <string name="mission_protocol_text">Please take some minutes for the protocol - this is very important!</string>
+    <string name="save_for_later"><![CDATA[Save & proceed later]]></string>
+    <string name="protocol_arrival_time">Arrival time</string>
+    <string name="protocol_absolute_arrival_time">Arrival time</string>
+    <string name="protocol_absolute_arrival_time_helptext">Unfortunately, the App was unable to detect when you arrived at the emergency location. Please add this information by yourself.</string>
+    <string name="protocol_relative_arrival_time">Relative to the Emergency team arrival time</string>
+    <string name="later_than_ambulance">Later than ambulance</string>
+    <string name="earlier_than_ambulance">Earlier than ambulance</string>
+    <string name="protocol_reaction">Reaction to Speech</string>
+    <string name="time_of_arrival">Time of arrival</string>
+    <string name="time">Time</string>
+    <string name="measurements">Measurements</string>
+    <string name="transfer_status">Transfer status</string>
+    <string name="no_details">No details provided</string>
+    <string name="awake">Awake</string>
+    <string name="sleepy">Sleepy</string>
+    <string name="comatose">Comatose</string>
+    <string name="protocol_orientation">Orientation</string>
+    <string name="oriented">Oriented</string>
+    <string name="limited_oriented">Limited oreinted</string>
+    <string name="disoriented">Disoriented</string>
+    <string name="not_applicable">Not applicable</string>
+    <string name="protocol_pupil">Pupil comparison</string>
+    <string name="isocor">Isocor</string>
+    <string name="anisocor">Anisocor</string>
+    <string name="protocol_pupil_left">Pupil left</string>
+    <string name="dilated">Dilated</string>
+    <string name="mid_dilated">Mid dilated</string>
+    <string name="narrow">Narrow</string>
+    <string name="protocol_pupil_right">Pupil right</string>
+    <string name="protocol_breathing">Kind of Breathing</string>
+    <string name="sufficient_breathing">Sufficient spontaneous breathing</string>
+    <string name="not_sufficient_breathing">Not sufficient spontaneous breathing</string>
+    <string name="breathing_after">Spontaneous breathing after clearing of airways</string>
+    <string name="no_breathing">No breathing</string>
+    <string name="recovery">Recovery position</string>
+    <string name="free_airways">Created free airways</string>
+    <string name="more_than_one">You can chose more than one answer.</string>
+    <string name="rescue_breathing">Rescue breathing</string>
+    <string name="not_carried_checkbox">Was not carried out</string>
+    <string name="carried_by_me">Carried out by me</string>
+    <string name="carried_by_others_checkbox">Carried out by others</string>
+    <string name="with_aids_checkbox">With medical aids (mask etc.)</string>
+    <string name="without_aids_checkbox">Without medical aids</string>
+    <string name="protocol_closed">Protocol closed</string>
+    <string name="closed_by_me_and_others">Carried out by me and others alternating</string>
+    <string name="protocol_transfer">Transfer status</string>
+    <string name="transfer_recovered">Recovered</string>
+    <string name="transfer_unchanged">Unchanged</string>
+    <string name="transfer_worse">Worsened</string>
+    <string name="protocol_remarks">Remarks</string>
+    <string name="protocol_finished">Protocol filled successfully</string>
+    <string name="security">Security</string>
+    <string name="your_qualification">My qualification for reanimation</string>
+    <string name="my_job">My Job</string>
+    <string name="start_route">Start route</string>
+    <string name="finish">Finish</string>
+    <string name="finished">Finished</string>
+    <string name="aborted">Aborted</string>
+    <string name="change_password">Change Password</string>
+    <string name="change_pin">Change Pin</string>
+    <string name="use_touchid">Use Touch ID</string>
+    <string name="old_password">Old Password</string>
+    <string name="old_password_wrong">Old Password is incorrect.</string>
+    <string name="new_pass">New Password</string>
+    <string name="repeat_new_password">Repeat New Password</string>
+    <string name="cancel_reason">Why did you need to cancel the mission?</string>
+    <string name="cannot_get_emergencies">Please turn on GPS in order to get emergency notifications</string>
+    <string name="finish_emergency">Finish the alert</string>
+    <string name="sucessful_mission">I have successfully closed this mission.</string>
+    <string name="cancel_mission">I had to cancel the mission.</string>
+    <string name="qualification">Qualification</string>
+    <string name="Expertise">Expertise</string>
+    <string name="profession">Profession</string>
+    <string name="report_savelater_info">Your protocol was saved.</string>
+    <string name="expired_emergency">Expired emergency!</string>
+
+    <string name="report_diagnosis">Suspected diagnosis</string>
+    <string name="report_diagnosis_cerebralhermorrhage">Cerebral hemorrhage</string>
+    <string name="report_diagnosis_sudden_death">Sudden infant death (SIDS)</string>
+    <string name="report_diagnosis_trauma">Trauma</string>
+    <string name="report_diagnosis_cardial">Cardial</string>
+    <string name="report_diagnosis_drowning">Drowning</string>
+    <string name="report_diagnosis_hypoxia">Hypoxia</string>
+    <string name="report_diagnosis_intoxication">Intoxication</string>
+    <string name="report_diagnosis_bleed">Bleed to death</string>
+    <string name="report_diagnosis_stroke">Stroke</string>
+    <string name="report_diagnosis_sepsis">Sepsis</string>
+    <string name="report_diagnosis_metabolic">Metabolic</string>
+    <string name="report_diagnosis_sports">In cooperation with sports activities</string>
+    <string name="report_diagnosis_others">Others</string>
+
+    <string name="report_location">Location</string>
+    <string name="report_location_apartment">Apartment</string>
+    <string name="report_location_docotorsoffice">Doctor\'s office</string>
+    <string name="report_location_sportsclub">Sports Club</string>
+    <string name="report_location_nursinghome">Nursing home</string>
+    <string name="report_location_street">Street</string>
+    <string name="report_location_massevent">Mass event</string>
+    <string name="report_location_workplace">Workplace</string>
+    <string name="report_location_public">Public</string>
+    <string name="report_location_educational">Educational institution</string>
+    <string name="report_location_others">Others</string>
+    <string name="report_cardiac">Cardiac massage</string>
+    <string name="report_cardiac_not">Was not carried out</string>
+    <string name="report_cardiac_me">Carried out by me</string>
+    <string name="report_cardiac_both">Carried out by me and others alternating</string>
+    <string name="report_cardiac_others">Carried out by others</string>
+
+    <string name="report_defibrilator">AED</string>
+    <string name="report_defibrilator_not">Was not carried out</string>
+    <string name="report_defibrilator_me">Carried out by me</string>
+    <string name="report_defibrilator_others">Carried out by others</string>
+
+    <string name="report_conscious">Consciousness</string>
+    <string name="report_conscious_awake">Awake</string>
+    <string name="report_conscious_dead">Death</string>
+    <string name="report_conscious_sleepy">Sleepy</string>
+    <string name="report_conscious_unconscious">Unconscious</string>
+    <string name="report_conscious_speech">Reaction to Speech</string>
+
+    <string name="report_speech_unconscious">Unconscious</string>
+    <string name="report_speech_awake">Awake</string>
+    <string name="report_speech_pain">Responds to pain</string>
+
+    <string name="report_breathing_normal">Normal breathing</string>
+    <string name="report_breathing_spontaneously">Spontaneously breathing</string>
+    <string name="report_breathing_spastik" translatable="false">Spastik</string>
+    <string name="report_breathing_hyperventilation">Hyperventilation</string>
+    <string name="report_breathing_gasping">Gasping</string>
+    <string name="report_breathing_rattling">Rattling noises</string>
+    <string name="report_breathing_respiration">Respiration</string>
+    <string name="report_breathing_layingoftherespiratorysystem">Laying of the respiratory system</string>
+    <string name="report_breathing_dyspnea">Dyspnea</string>
+    <string name="report_breathing_cyanosis">Cyanosis</string>
+    <string name="report_breathing_stridor">Stridor</string>
+    <string name="report_breathing_apnea">Apnoe</string>
+    <string name="report_breathing_not_assessable">Not assessable</string>
+
+    <string name="report_defi_details">AED evaluation</string>
+    <string name="report_defi_details_pulse">Pulse</string>
+    <string name="report_defi_details_shocks">Number of shocks</string>
+    <string name="report_defi_details_successful">AED successful </string>
+    <string name="report_defi_details_monobi">AED mono- or biphasic?</string>
+    <string name="report_defi_details_mono">Monophasic</string>
+    <string name="report_defi_details_biphasic">Biphasic</string>
+    <string name="remarks_info">Please do not add any personal information (name, age, etc.).</string>
+
+    <!--About Page-->
+    <string name="first_about_view_header">First Responder App</string>
+    <string name="first_about_view_text">In sudden cardiac death, seconds count. \n\nSudden cardiac death is one of the major causes for death.</string>
+    <string name="second_about_view_header">Why the First Responder App?</string>
+    <string name="second_about_view_text">The First Responder App helps to save lives in the context of sudden cardiac death (SCD) and is one puzzle-part of a bundle of measures against SCD.</string>
+
+    <string name="third_about_view_text">Our project lives from the people who are willing to contribute and accept incoming emergencies - be with us and help to save lives!
+        \n\n
+        The more first responders the higher the density and probability to be near a potential Sudden Cardiac Death (SCD).</string>
+
+    <string name="fourth_about_view_text">
+        The application has also a location database for publicly accessible Automated External Defibrillators (AED). Additionally the system has a link to the central European Registry of Cardiac Arrest (EuReCa One) - all cases can be tracked centrally over Europe.
+        \n\n
+        To deliver high standards, everyone of our rescuers needs to fullfill certain standards and / or has to be tranied. Please see our website for further details.
+    </string>
+
+    <string name="fifth_about_header">Our parnters</string>
+    <string name="clear">Clear Signature</string>
+    <string name="ongoingMission">Ongoing Emergency</string>
+    <string name="missingReports">Missing Report</string>
+    <string name="completedMission">Canceled or Finished Emergency</string>
+    <string name="signature_title">Signature:</string>
+    <string name="signature_explanation">Please sign the basic agreement with your finger</string>
+    <string name="signature">Enter Signature</string>
+    <string name="byCC">Canceled From Control Center</string>
+    <string name="password_format">Password must have at least 6 character and must contain at least one number und a capital case letter!</string>
+    <string name="email_taken">The email address is already registered!</string>
+    <string name="select_one">Select one of the options from the list</string>
+    <string name="problem">Something went wrong. The process failed!</string>
+    <string name="username_exists">Account already exists for this username!</string>
+    <string name="emergency_details">Emergency Details</string>
+    <string name="emergency_id">ID</string>
+    <string name="patient_name">Patient Name</string>
+    <string name="keyword">Keyword</string>
+    <string name="indicator_name">Indicator Name</string>
+    <string name="emergency_number">Number</string>
+    <string name="title_activity_map">Map</string>
+    <string name="title_activity_emergency_tab" translatable="false">EmergencyTabActivity</string>
+    <string name="section_format" translatable="false">Hello World from section: %1$d</string>
+    <string name="title_activity_create_defibrilator">Add new AED</string>
+    <string name="notification_emergency_expired">Incoming emergency is expired!</string>
+    <string name="protocol_age_of_patient">Age of Patient</string>
+    <string name="protocol_age_days_1to7">1–7 days</string>
+    <string name="protocol_age_days_8to28">8–28 days</string>
+    <string name="protocol_age_younger_than_1_year">younger than 1 year</string>
+    <string name="protocol_age_typein">Specify approximate age</string>
+    <string name="protocol_age_years">years</string>
+    <string name="protocol_sex_male">male</string>
+    <string name="protocol_sex_female">female</string>
+    <string name="protocol_sex_title">Sex</string>
+    <string name="protocol_resuscitation_title">Resuscitation</string>
+    <string name="protocol_resuscitation_01">Resuscitation performed</string>
+    <string name="protocol_resuscitation_02">Resuscitation not performed as patient was not reachable</string>
+    <string name="protocol_resuscitation_03">Resuscitation not performed, due to physical condition</string>
+    <string name="protocol_resuscitation_04">Resuscitation not performed, due to other factors</string>
+    <string name="report_location_hospital">Hospital</string>
+    <string name="report_location_birthhouse">Birth House</string>
+    <string name="report_location_unknown">Unknown</string>
+    <string name="protocol_yes">yes</string>
+    <string name="protocol_no">no</string>
+    <string name="report_conscious_narcotized">Narcotized</string>
+    <string name="report_conscious_responds_speech">Responds to speech</string>
+    <string name="report_conscious_responds_pain">Responds to pain</string>
+    <string name="report_conscious_not_assessable">Not assessable</string>
+    <string name="protocol_schoolbuilding_title">Emergency in School Building</string>
+    <string name="report_diagnosis_isbsab">ICB / SAB</string>
+    <string name="report_diagnosis_unknown">Unknown</string>
+    <string name="report_orientation_normal">Normal</string>
+    <string name="report_orientation_limited">Limited</string>
+    <string name="report_orientation_unknown">Unknown</string>
+    <string name="report_sports_yes">Yes</string>
+    <string name="report_sports_no">Yes</string>
+
+    <string name="protocol_witness">Accidentally present wittness</string>
+    <string name="protocol_firstresponder">App - First Responder</string>
+    <string name="protocol_notobserved">Not oberserved</string>
+    <string name="protocol_notspecified">Not specified</string>
+
+    <string name="protocol_collapse_title">Collapse Oberserved</string>
+    <string name="protocol_cardiac_title">Cardiac Massage</string>
+    <string name="protocol_ventilation_title">Ventilation</string>
+    <string name="protocol_telemedicine_title">Telemedicine</string>
+    <string name="protocol_defibrillator_title">AED</string>
+    <string name="protocol_aedshocks_title">Number of AED shocks</string>
+
+    <string name="protocol_aedshocks_notspecified">not specified</string>
+    <string name="protocol_aedshocks_1">1 Shock</string>
+    <string name="protocol_aedshocks_upto3">3 Shocks</string>
+    <string name="protocol_aedshocks_4to6">4-6 Shocks</string>
+    <string name="protocol_aedshocks_7to9">7-9 Shocks</string>
+    <string name="protocol_aedshocks_more">more than 9 Shocks</string>
+    <string name="protocol_aedshocks_unknown">unknown</string>
+
+    <string name="protocol_manufacturer_title">AED Manufacturer</string>
+    <string name="protocol_aedmanufacturer_unknown">unkown</string>
+    <string name="protocol_aedmanufacturer_defibtech">Defibtech</string>
+    <string name="protocol_aedmanufacturer_cumedicalsystems">CU Mediacal Systems</string>
+    <string name="protocol_aedmanufacturer_ge">GE</string>
+    <string name="protocol_aedmanufacturer_welch">Welch Allyn</string>
+    <string name="protocol_aedmanufacturer_weinmann">Weinmann</string>
+    <string name="protocol_aedmanufacturer_draeger">Dräger</string>
+    <string name="protocol_aedmanufacturer_primedic">Primedic</string>
+    <string name="protocol_aedmanufacturer_zoll">Zoll</string>
+    <string name="protocol_aedmanufacturer_marquette">Marquette</string>
+    <string name="protocol_aedmanufacturer_medtronic">Medtronic/Physio-Control</string>
+    <string name="protocol_aedmanufacturer_gs">GS Elektromedizinische Geräte</string>
+    <string name="protocol_aedmanufacturer_schiller">Schiller/Bruker</string>
+    <string name="protocol_aedmanufacturer_leardal">Laerdal/Phillips/HP</string>
+    <string name="protocol_aedmanufacturer_heartsine">HeartSine</string>
+    <string name="protocol_aedmanufacturer_notspecified">not specified</string>
+    <string name="protocol_publicaed_title">Public AED</string>
+    <string name="protocol_publicaed_public">Public AED</string>
+    <string name="protocol_publicaed_private">Private AED</string>
+    <string name="report_conscious_end_title">Consciousness</string>
+    <string name="report_cardiovascular_title">Cardiovascular</string>
+    <string name="report_cardiovascular_running">Running reanimation</string>
+    <string name="report_cardiovascular_normal">Normal breathing</string>
+    <string name="report_cardiovascular_conscious">Patient is conscious</string>
+    <string name="report_cardiovascular_died">Patient deceased</string>
+    <string name="protocol_aedmanufacturer_title">AED Manufacturer</string>
+    <string name="protocol_sports_title">Sport Activity</string>
+    <string name="protocol_age_helptext">For further analysis pediatric resuscitation measures, all patients younger than 28 days are determined in age categories.</string>
+    <string name="protocol_sex_helptext">Sex of the patient</string>
+    <string name="protocol_resuscitation_helptext">Was a resuscitation already carried out on arrival or for what reasons was the implementation of the resuscitation treatment waived?</string>
+    <string name="protocol_location_helptext">Please specify the emergency location.</string>
+    <string name="protocol_schoolbuilding_helptext">Was the cardiac arrest suffered in a school building?</string>
+    <string name="protocol_conscious_helptext">What was the patient\'s consciousness on arrival?</string>
+    <string name="protocol_breathing_helptext">Please specify the kind of breathing after the  cardiac arrest occured.</string>
+    <string name="protocol_diagnosis_helptext">What was the presumed diagnosis that leads to the cardiac arrest?</string>
+    <string name="protocol_orientation_helptext">What was the orientation of the patient when the App-Helper arrived?</string>
+    <string name="protocol_sport_helptext">Is there any relationship to sport activities?</string>
+    <string name="protocol_collapse_helptext">Who has observed the collapse?</string>
+    <string name="protocol_cardiac_helptext">Who started with the cardiac massage?</string>
+    <string name="protocol_ventilation_helptext">Who started with the ventilation?</string>
+    <string name="protocol_telemedicine_helptext">After notifying the regular ambulance service, did the dispatch center give a telephone instruction on how to carry out resuscitation measures?</string>
+    <string name="protocol_defibrillator_helptext">Who started with the defibrillation?</string>
+    <string name="protocol_aedshocks_helptext">Please specify the total number of given defibrillation shocks. This information is independent of the result.</string>
+    <string name="protocol_aedmanufacturer_helptext">The common defibrillator types that are used in Germany. If the entry for a used device is missing, please specify it in the free text field in the last step. The data record will then be extended accordingly.</string>
+    <string name="protocol_publicaed_helptext">Please specify whether a public or a private defibrillator was used.</string>
+    <string name="protocol_conscious_end_helptext">Please specify the consciousness of the patient when handed over to the rescue service.</string>
+    <string name="protocol_cardiovascular_helptext">Please specify the consciousness of the patient when handed over to the rescue service.</string>
+    <string name="protocol_comment_helptext">Please do not enter any personal data like name, age etc. (max 1000)</string>
+
+    <string name="no_events_found">No events found.</string>
+    <string name="no_news_found">No news found.</string>
+    <string name="mobile_AED">Mobile AED vorhanden</string>
+    <string name="mobile_AED_available">Mobile AED Available</string>
+    <string name="enabled">Enabled</string>
+    <string name="disabled">Disabled</string>
+    <string name="mobile_aed_explanation">If you have access to a mobile AED please tell your EmergencyCenter</string>
+    <string name="indicator">Indicator</string>
+    <string name="login_reset_password">reset password</string>
+    <string name="login_not_valid_email">not a valid email address</string>
+    <string name="login_email_required">Please enter your email address</string>
+    <string name="reset_password_success">An email has been sent to reset your password</string>
+    <string name="reset_password_error">Something went wrong. Please contact our support</string>
+    <string name="password_reset_error_invalid_email">Email not found</string>
+    <string name="password_reset_error_connection_failed">Network unavailable. Please connect to the Internet</string>
+    <string name="thanks_for_your_help">Thanks for your help</string>
+
+
+    <!---Derfribilator info -->
+    <string name="defibrillator_approval">Thank you for adding a new AED. After verification we will activate your AED for every first responder</string>
+    <string-array name="defibrillator_array">
+        <item>Not specified</item>
+        <item>Laerdal/Phillips/HP</item>
+        <item>Schiller/Bruker</item>
+        <item>GS Elektromedizinische Geräte</item>
+        <item>Medtronic/Physio-Control</item>
+        <item>Marquette</item>
+        <item>Zoll</item>
+        <item>Primedic</item>
+        <item>Dräger</item>
+        <item>Weinmann</item>
+        <item>Welch Allyn</item>
+        <item>GE</item>
+        <item>Defibtech</item>
+        <item>HeartSine</item>
+        <item>Not classified</item>
+    </string-array>
+
+    <string name="producer">Producer</string>
+    <string name="type">Type</string>
+    <string name="model">Model</string>
+    <string name="select">Select</string>
+    <string name="add_defibrillator">Add AED</string>
+    <string name="view_added_defibrillator">Added AEDs</string>
+    <string name="view_defibrillator">View AED</string>
+    <string name="edit_defibrillator">Edit AED</string>
+    <string name="loading_data">Loading Data</string>
+    <string name="defrib_status_1">In Review</string>
+    <string name="defrib_status_2">Rejected</string>
+    <string name="defrib_status_3">Available</string>
+    <string name="defrib_status_4">Verified by ASB</string>
+    <string name="undefined">Undefined</string>
+    <string name="test_alarm">Receive test alarm every Sat 12:00 am</string>
+    <string name="manual_test_alarm">Receive a test alarm now</string>
+    <string name="test_alarm_created">Test alarm was created</string>
+    <string name="unknown">Unknown</string>
+    <string name="protocol_unknown">unknown</string>
+    <string name="no_statement_patient_not_resusciated">no statement, patient not resuscitated</string>
+    <string name="protocol_notclassified">Not classified</string>
+    <string name="report_conscious_not_documented">Not documented</string>
+    <string name="not_documented">not documented</string>
+    <string name="registration_successful">Registration successful completed</string>
+    <string name="userstatus_not_registered">Not registered user</string>
+    <string name="userstatus_active">Active user</string>
+    <string name="userstatus_inactive">Inactive user</string>
+    <string name="off_duty_activated">Off duty activated</string>
+    <string name="profile_back">Back to profile</string>
+    <string name="agreement_thank_you">Thank you for signing the agreement.</string>
+    <string name="agreement_sent">The agreement has been sent and you won\'t be able to modify it.\n\nIf you have questions, please do not hesitate to contact us.</string>
+
+    <string name="email_verification_title">email verification</string>
+    <string name="email_verification_hint1">Please confirm your email address.</string>
+    <string name="email_verification_hint2">You can also do this step later.</string>
+    <string name="no_email_app_found">Did not find any email app</string>
+    <string name="emergencycall">Emergency</string>
+    <string name="call_emergencycall">Call Emergency</string>
+    <string name="call_emergencycall_hint">Press the button to ask for help in an emergency.</string>
+
+    <string name="disable_emergency_recipience">Disable emergency recipience</string>
+    <string name="disable_emergency_recipience_hint">In this state you do not receive emergencies</string>
+    <string name="pin_required_description">Pin required to accept the emergency</string>
+    <string name="new_pin_description">Enter new pin to access the App</string>
+    <string name="fingerprint_not_recognized">Fingerprint was not recognized</string>
+    <string name="emergency_operation_protocol">Emergency Protocol</string>
+    <string name="button_save_protocol_and_save">Save and send Report</string>
+    <string name="selected_date_label">Selected date:</string>
+    <string name="selected_time_label">Selected time:</string>
+    <string name="not_yet_selected">not yet selected</string>
+    <string name="fill_all_fileds">Fill all fields!</string>
+    <string name="error_password_and_repeat">Password and repetition are not equal</string>
+    <string name="password_not_conform">Password is not conform to the Guidelines</string>
+    <string name="incomplete_protocol_saved">Your incomplete report was saved. You can reopen it from the start page</string>
+    <string name="back_to_homescreen">Back to the homescreen</string>
+    <string name="continue_filling_report">Continue filling out the report</string>
+    <string name="protocol_sucessfully_sent">The emergency report was successfully sent</string>
+    <string name="thank_you_for_the_collaboration">Many thanks for your support!</string>
+    <string name="go">go</string>
+    <string name="label_distance">Distance:</string>
+    <string name="label_task">Task:</string>
+    <string name="emergency_task_description">Please go to the location of the emergency and provide first aid.</string>
+    <string name="label_address">Address:</string>
+    <string name="label_object">Object:</string>
+    <string name="label_patient">Patient:</string>
+    <string name="label_reporter">Reporter:</string>
+    <string name="label_geolocation">Geo Coordination:</string>
+    <string name="label_emergency_number">Emergency Number:</string>
+    <string name="label_keyword">Keyword:</string>
+    <string name="why_have_you_finished_the_emergency">Why do you want to finish the emergency?</string>
+    <string name="button_cancel_emergency">Cancel emergency</string>
+    <string name="button_patient_reached">Patient reached</string>
+    <string name="activity_emergenc_finished_text">Because you accepted the emergency call, you have to fill out an emergency report.</string>
+    <string name="button_report">Fill report</string>
+    <string name="button_report_later">Fill report later</string>
+    <string name="label_off_duty">Off duty</string>
+    <string name="label_off_duties">Off duties</string>
+    <string name="label_off_duty_info">Please set your attendance break times here. In the defined times you don\'t receive emergency calls.</string>
+    <string name="label_choose_the_period">Choose the period:</string>
+    <string name="label_choose_duty_off_weekdays">Choose the days when you do not want to receive an emergency call</string>
+    <string name="no_alarms_at_home">Don\'t receive alarms at home</string>
+    <string name="no_emergency_calls_at_home">You don\'t receive emergency calls when being at home.</string>
+    <plurals name="protocols_to_complete">
+        <item quantity="one">1 Report is pending</item>
+        <item quantity="other">%d Reports are pending</item>
+    </plurals>
+
+    <string name="weekday_monday">Monday</string>
+    <string name="weekday_tuesday">Tuesday</string>
+    <string name="weekday_wednesday">Wednesday</string>
+    <string name="weekday_thursday">Thursday</string>
+    <string name="weekday_friday">Friday</string>
+    <string name="weekday_saturday">Saturday</string>
+    <string name="weekday_sunday">Sunday</string>
+    <string name="error_start_end_end">Please put in a start- and a end time</string>
+    <string name="duty_off_times_saved">Off duty times saved</string>
+    <string name="next_button">Next</string>
+    <string name="address_explanation">For the complete activation and qualification examination we need your full address.</string>
+    <string name="address_street">Street:</string>
+    <string name="postal_code">Postal code:</string>
+    <string name="country">Country:</string>
+    <string name="qualification_explanation">With the help of your qualification and profession, the respective dispatch center can send you suiteable emergencies.</string>
+    <string name="qualification_for_reanimation">My qualification for reanimation:</string>
+    <string name="personal_information_thank_you">Thank you for your information.</string>
+    <string name="personal_information_sent">Your personal data was saved successfully\n\nYou can always change your profile information.</string>
+    <string name="pin_explanation">Incoming emergencies can only be accepted via a secret PIN. This protects against unauthorized access. Please enter 6 numbers.</string>
+
+    <!-- TODO: Settings-->
+    <string name="change_tone">Change tone</string>
+    <string name="select_one_of_the_tones_from_the_list">Select one of the tones from the list</string>
+    <string name="receive_test_alarm_on_saturday">Receive test alarm on Saturday</string>
+    <string name="if_you_want_to_test_emergency_now_press_here">If you want to test emergency now, Press here</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="are_you_sure_to_delete_account">Your are going to delete your account. This action can not be undone! Press \'OK\' to proceed</string>
+    <string name="are_you_sure_to_log_out">You are going to log out. You can log in later at any time. Press \'OK\' to proceed</string>
+    <string name="log_out">Log Out</string>
+    <string name="user_configuration_saved">User configuration saved!</string>
+
+    <!-- TODO: Standby-->
+    <string name="off_duty_time">Off duty time</string>
+    <string name="select_the_time">Select the time</string>
+    <string name="select_days_no_emergency">Select the days you do not want to receive any emergencies</string>
+    <string name="do_not_notify_me_at_home">Do not notify me at home</string>
+    <string name="please_enter_your_off_duty_times_here">Please enter your off duty times here. Within these times, you will not receive emergency calls.</string>
+    <string name="you_wont_receive_emergency_calls_at_home">You won\'t receive any emergency calls if you are in your home area</string>
+
+    <string-array name="days">
+        <item name="monday">Monday</item>
+        <item name="tuesday">Tuesday</item>
+        <item name="wednesday">Wednesday</item>
+        <item name="thursday">Thursday</item>
+        <item name="friday">Friday</item>
+        <item name="saturday">Saturday</item>
+        <item name="sunday">Sunday</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="company">Company</string>
+
+    <string name="your_current_position">Your current position</string>
+
+
+    <string name="service_not_available">Service not available!</string>
+    <string name="invalid_lat_long_used">Invalid geo location used!</string>
+
+    <string name="no_address_found">No address found!</string>
+    <string name="address_found">Address found!</string>
+    <string name="no_geocoder_available">no geocoder available!</string>
+
+    <string name="go_to_course">Go to course</string>
+    <string name="call_112">Call 112</string>
+    <string name="do_you_want_to_call_112">Do you want to call 112?</string>
+
+
+    <string name="user_active">Active</string>
+    <string name="user_inactive">Inactive</string>
+    <string name="user_not_registered">Not registered</string>
+
+    <string name="user_must_be_activated">Only activated users can test this functionality!</string>
+
+
+    <string name="fr_address">Address</string>
+    <string name="fr_job">Job</string>
+    <string name="fr_qualification">Qualification</string>
+    <string name="fr_profile_id">Profile ID</string>
+    <string name="fr_emergency_number">Emergency Number</string>
+    <string name="fr_name">Name</string>
+
+    <string name="content_description_null" translatable="false"> </string>
+
+    <string name="very_long_title" translatable="false">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</string>
+
+    <string name="very_long_content" translatable="false">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Condimentum lacinia quis vel eros donec ac odio tempor orci. Pellentesque massa placerat duis ultricies lacus. Eget mauris pharetra et ultrices neque ornare aenean euismod. Consectetur a erat nam at lectus urna duis convallis convallis. Metus dictum at tempor commodo ullamcorper a lacus. Adipiscing bibendum est ultricies integer. Scelerisque varius morbi enim nunc faucibus a. Tincidunt vitae semper quis lectus. Viverra maecenas accumsan lacus vel facilisis volutpat est velit egestas. Venenatis cras sed felis eget velit. Nisl purus in mollis nunc sed id semper. Ultricies tristique nulla aliquet enim tortor at auctor urna.
+
+Volutpat est velit egestas dui id ornare arcu. Elit scelerisque mauris pellentesque pulvinar pellentesque habitant. Non enim praesent elementum facilisis leo vel fringilla est ullamcorper. Suspendisse potenti nullam ac tortor vitae purus faucibus ornare suspendisse. Nisl nisi scelerisque eu ultrices. Eu facilisis sed odio morbi quis commodo. Ac tincidunt vitae semper quis lectus nulla at volutpat. Ipsum a arcu cursus vitae congue mauris rhoncus aenean vel. Eleifend mi in nulla posuere sollicitudin. Enim nec dui nunc mattis enim ut tellus elementum. Suscipit adipiscing bibendum est ultricies integer quis. Pharetra massa massa ultricies mi quis hendrerit dolor. Nisl purus in mollis nunc sed id semper risus in. Consequat mauris nunc congue nisi vitae suscipit tellus mauris. Volutpat maecenas volutpat blandit aliquam etiam erat velit scelerisque. Ultrices vitae auctor eu augue ut lectus arcu.
+
+Volutpat commodo sed egestas egestas fringilla phasellus. Ut porttitor leo a diam sollicitudin tempor id eu nisl. Quisque egestas diam in arcu cursus euismod quis viverra. Malesuada proin libero nunc consequat interdum varius. Quam nulla porttitor massa id. Lorem sed risus ultricies tristique nulla aliquet enim. Egestas sed sed risus pretium quam vulputate dignissim suspendisse in. Quis blandit turpis cursus in hac. Est ultricies integer quis auctor elit sed. Mauris commodo quis imperdiet massa. Morbi tristique senectus et netus et malesuada fames.
+
+Vitae auctor eu augue ut lectus. Erat nam at lectus urna duis convallis convallis tellus id. Cursus euismod quis viverra nibh cras pulvinar. Bibendum enim facilisis gravida neque convallis a. Phasellus vestibulum lorem sed risus ultricies tristique nulla. Malesuada pellentesque elit eget gravida cum sociis natoque. Id leo in vitae turpis massa. Condimentum mattis pellentesque id nibh tortor id aliquet lectus. Et molestie ac feugiat sed lectus vestibulum mattis ullamcorper velit. Proin sed libero enim sed faucibus turpis in. Risus in hendrerit gravida rutrum quisque. Id eu nisl nunc mi ipsum. Libero id faucibus nisl tincidunt eget nullam non nisi. Mauris a diam maecenas sed enim ut sem viverra aliquet.
+
+Egestas diam in arcu cursus euismod quis. Egestas dui id ornare arcu odio ut sem. Interdum velit euismod in pellentesque massa placerat. Cras semper auctor neque vitae tempus quam pellentesque nec nam. Velit sed ullamcorper morbi tincidunt ornare massa eget. Auctor neque vitae tempus quam. Urna et pharetra pharetra massa. Convallis tellus id interdum velit laoreet id. Tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum. Vitae proin sagittis nisl rhoncus mattis. Integer vitae justo eget magna fermentum iaculis eu non diam.
+
+Purus ut faucibus pulvinar elementum integer enim. In fermentum posuere urna nec tincidunt praesent semper feugiat nibh. Nullam ac tortor vitae purus faucibus ornare. Facilisis volutpat est velit egestas dui id ornare arcu. In nulla posuere sollicitudin aliquam ultrices sagittis orci a scelerisque. Amet cursus sit amet dictum sit amet justo. Faucibus purus in massa tempor nec feugiat. Pretium lectus quam id leo in vitae turpis massa sed. Sagittis purus sit amet volutpat. Eu augue ut lectus arcu bibendum at varius. Sed viverra tellus in hac habitasse. Sit amet justo donec enim diam. Id diam maecenas ultricies mi eget. Lobortis elementum nibh tellus molestie nunc. Pulvinar neque laoreet suspendisse interdum. Vitae nunc sed velit dignissim. Maecenas sed enim ut sem viverra aliquet. Nulla facilisi etiam dignissim diam quis enim. Ac tortor vitae purus faucibus ornare. Ut sem nulla pharetra diam sit.
+
+Sit amet facilisis magna etiam tempor orci eu. Molestie nunc non blandit massa. In hendrerit gravida rutrum quisque non tellus orci ac. In cursus turpis massa tincidunt dui ut ornare lectus sit. Sit amet mattis vulputate enim nulla aliquet porttitor lacus luctus. Tristique senectus et netus et malesuada fames. Adipiscing elit pellentesque habitant morbi. Integer vitae justo eget magna. Semper auctor neque vitae tempus quam pellentesque. Sed vulputate odio ut enim. Cursus turpis massa tincidunt dui ut ornare. Tristique senectus et netus et malesuada. Sed risus ultricies tristique nulla. Massa ultricies mi quis hendrerit dolor magna eget. Mattis nunc sed blandit libero volutpat sed cras ornare. Nulla at volutpat diam ut venenatis. Tellus id interdum velit laoreet. Imperdiet proin fermentum leo vel. Convallis tellus id interdum velit laoreet.
+
+Porta lorem mollis aliquam ut porttitor leo a diam. Congue quisque egestas diam in arcu. Magna etiam tempor orci eu. Arcu dictum varius duis at consectetur lorem donec. Ultricies tristique nulla aliquet enim tortor at auctor urna. Leo integer malesuada nunc vel risus commodo viverra maecenas accumsan. Sodales ut etiam sit amet nisl. Vel pretium lectus quam id leo in vitae turpis massa. Condimentum mattis pellentesque id nibh tortor id. Mi sit amet mauris commodo quis imperdiet massa tincidunt nunc. Ac felis donec et odio pellentesque diam volutpat commodo. Molestie a iaculis at erat pellentesque adipiscing commodo elit. Imperdiet nulla malesuada pellentesque elit. Urna nunc id cursus metus. Sed euismod nisi porta lorem mollis aliquam ut porttitor leo. Amet risus nullam eget felis eget nunc lobortis mattis aliquam. Amet nisl purus in mollis nunc sed.
+
+Phasellus vestibulum lorem sed risus ultricies. Ipsum a arcu cursus vitae. Aenean euismod elementum nisi quis. Pellentesque massa placerat duis ultricies lacus sed. Vel pharetra vel turpis nunc eget lorem. Mi in nulla posuere sollicitudin aliquam ultrices sagittis orci a. Sed vulputate mi sit amet mauris commodo quis imperdiet massa. Commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Arcu felis bibendum ut tristique et egestas quis. Sem nulla pharetra diam sit. Dignissim suspendisse in est ante in nibh. Est lorem ipsum dolor sit amet consectetur adipiscing. Sed viverra tellus in hac habitasse platea dictumst vestibulum. Id donec ultrices tincidunt arcu non. Ornare arcu odio ut sem nulla. Augue eget arcu dictum varius. Tellus molestie nunc non blandit massa enim nec dui.
+
+Eget velit aliquet sagittis id. Lorem ipsum dolor sit amet consectetur adipiscing elit ut aliquam. Consectetur libero id faucibus nisl tincidunt eget nullam. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique senectus. Pharetra et ultrices neque ornare aenean. Sit amet porttitor eget dolor morbi non arcu. A cras semper auctor neque. Posuere ac ut consequat semper viverra. Adipiscing vitae proin sagittis nisl rhoncus mattis. Sit amet risus nullam eget. Nunc id cursus metus aliquam eleifend mi in nulla. Id aliquet lectus proin nibh nisl condimentum id venenatis.</string>
+
+    <string name="authorized">Authorized</string>
+    <string name="unauthorized">Unauthorized</string>
+
+    <string name="critical_alert">Critical alert</string>
+    <string name="critical_alert_info">Critical alert will ignore mute and do not disturb mode</string>
+    <string name="notifications_info">Activating notifications enable you to receive the emergency missions.</string>
+
+    <string name="certificate_info">Please upload a valid proof of your first aid qualification. The evidence should not be older than 2 years.</string>
+    <string name="select_one_of_the_options">Select one of the options to send your first Aid Certificate</string>
+    <string name="take_picture">Take picture</string>
+    <string name="upload_picture">Upload picture</string>
+    <string name="first_responder_certification">First Responder certification</string>
+    <string name="optional_certificates">Optional certificates</string>
+    <string name="add_additional_certificates">Add additional certificates...</string>
+
+    <string name="other_document">Other document</string>
+
+    <string name="capture_image">Capture image</string>
+    <string name="select_image">Select from images</string>
+
+
+    <!-- TODO: Profile Page -->
+    <string name="agreement">Agreement</string>
+    <string name="agreement_signed">Signed</string>
+    <string name="agreement_not_signed">Not signed</string>
+
+    <string name="personal_data">Personal data</string>
+    <string name="personal_data_complete">Complete</string>
+    <string name="personal_data_incomplete">Incomplete</string>
+
+    <string name="certificate">Certificate</string>
+    <string name="certificate_not_submitted">Not submitted</string>
+    <string name="certificate_in_review">In review</string>
+    <string name="certificate_reviewed">Reviewed</string>
+
+    <string name="access">Access</string>
+    <string name="access_change_pin">Change PIN</string>
+    <string name="access_no_pin_set_up">No PIN is set up</string>
+
+    <string name="notifications">Notifications</string>
+    <string name="notifications_enabled">Enabled</string>
+    <string name="notifications_disabled">Disabled</string>
+
+    <string name="location">Location</string>
+    <string name="location_authorized">Authorized</string>
+    <string name="location_unauthorized">Unauthorized</string>
+
+
+    <string name="profile_photo">Profile Photo</string>
+    <string name="change_photo">Change photo</string>
+    <string name="delete_photo">Delete photo</string>
+    <string name="you_have_not_added_aeds">You have not added any AEDs yet. Please add one by pressing the plus button</string>
+
+
+    <!-- TODO: Status Inactive Reasons -->
+    <string name="your_status_is_inactive_because">Your status is inactive because:</string>
+    <string name="sir_off_duty">(Home Page) Off duty switch is activated</string>
+    <string name="sir_profile_incomplete">(Profile Page) Profile is incomplete</string>
+    <string name="sir_standby_hours">(Standby Mode Page) You have set off duty hours between %1$s and %2$s</string>
+    <string name="sir_standby_days">(Standby Mode Page) You have set off duty days for %1$s</string>
+    <string name="sir_standby_home">(Standby Mode Page) You have checked not to notify at home</string>
+
+    <string name="press_button_below_to_test_emergency">Press the button below to test emergency now.</string>
+    <string name="test_emergency_will_soon_start">Test emergency will start soon..</string>
+    <string name="test_emergency_now">Test emergency now</string>
+
+
+    <string name="additional_certificate_info">You can upload further documents beside your main qualification prove.</string>
+
+    <string name="call">Call</string>
+
+    <string name="fill_with_current_address">Fill address fields with current position</string>
+
+    <string name="notifications_dialog_info">Click to \'Enable\' to enable emergency notifications and \'Disable\' to disable it</string>
+    <string name="location_permission_dialog">App needs location access to send your current position in case of emergency. Without this permission you won\'t be able to accept nor call for emergency through this application</string>
+
+    <string name="enable">Enable</string>
+    <string name="disable">Disable</string>
+
+    <string name="additional_certificate_added">Additional certificate added</string>
+
+    <string name="code">Code</string>
+
+    <string name="data_info_url">url_de</string>
+
+    <string name="please_enter_your_pin">Please enter your personal PIN.</string>
+    <string name="please_reenter_your_pin">Please reenter your personal PIN to activate it.</string>
+    <string name="please_enter_your_current_pin">Please enter your current pin to set a new one</string>
+
+    <string name="pin_saved">PIN saved!</string>
+    <string name="pins_doesnt_match">PINs doesn\'t match!</string>
+
+    <string name="text_about">About</string>
+
+    <string name="if_you_have_account_by_first_responder_app">If you have an account by “Meine Stadt rettet", you can use this to sign in.</string>
+
+    <string name="pending_reports">Pending reports</string>
+
+
+    <string name="intro_title_1">Sudden Cardiac Death</string>
+    <string name="intro_title_2">Volunteer first-responders</string>
+    <string name="intro_title_3">Every minute counts</string>
+    <string name="intro_title_4">Early care of the patient</string>
+    <string name="intro_title_5">We need your support</string>
+    <string name="intro_title_6">Membership</string>
+
+    <string name="intro_content_1"><![CDATA[In <b>sudden cardiac death</b> seconds count.<br/><br/> Every <b>year numerous people</b> worldwide suffer from sudden cardiac death.]]></string>
+    <string name="intro_content_2"><![CDATA[A network of <b>volunteer first-aiders</b> who are additionally alerted by the control center <b>via the app</b> can significantly <b>increase the survival</b> from sudden cardiac death.]]></string>
+    <string name="intro_content_3"><![CDATA[The volunteer first aiders need on average <b>only 3–4 minutes to reach the location of the emergency</b>]]></string>
+    <string name="intro_content_4"><![CDATA[The <b>rescue workers</b> are alerted in the normal way.<br/><br/> The <b>first aider initiates the first medical care</b> of the patient to reduce the <b>therapy-free</b> incident until the arrival of the rescue workers.]]></string>
+    <string name="intro_content_5"><![CDATA[The <b>success of the project</b> depends on the <b>participation</b> of volunteer first responders.<br/><br/> The higher the <b>first responder density</b> in a region the higher the <b>alerting success</b> and <b>survival chance</b> of patient suffering from sudden cardiac death.]]></string>
+    <string name="intro_content_6"><![CDATA[<b>Participate to the project and save lives!</b><br/><br/>In order to ensure the best possible patient care quality, the registered first responders have to provide a prove of their qualification]]></string>
+
+    <string name="close">Close</string>
+
+    <string name="agreement_basic">Basic agreement</string>
+
+    <string name="agreement_additional">Additional agreement</string>
+
+    <string name="agreement_basic_info">BASIC AGREEMENT</string>
+
+    <string name="agreement_sub_info">ADDITIONAL AGREEMENT</string>
+
+    <string name="agreement_info">The agreement authorizes you to use the app in certain regions. The basic agreement determines general user agreement</string>
+
+    <string name="lat">Lat:</string>
+    <string name="lng">Lng:</string>
+
+    <string name="relative">Angehöriger</string>
+    <string name="ambulance_service">Rettungsdienst</string>
+
+
+    <string name="spontaneous_helper">Spontaneous Helper</string>
+    <string name="spontaneous_helper_notification">Spontaneous Helper Notification</string>
+    <string name="spontaneous_helper_info">As a spontaneous helper you voluntarily support aid organisations in difficult times by carrying out certain tasks.</string>
+    <string name="i_would_like_to_get_notified">I would like to be notified for the following tasks:</string>
+    <string name="elderly_care">Elderly care</string>
+    <string name="support_for_ambulance_service">Support for ambulance service</string>
+    <string name="physically_difficult_task">Physically difficult task</string>
+    <string name="general_spontaneous_assistance">General spontaneous assistance</string>
+    <string name="elderly_care_eg">e.g. shopping service, accompaniment to the doctor</string>
+    <string name="support_for_ambulance_service_eg">e.g. provision of material, registration and care of uninjured persons, drivers</string>
+    <string name="physically_difficult_task_eg">e.g. towing sandbags or boxes</string>
+    <string name="general_spontaneous_assistance_eg">e.g. food banks, food delivery</string>
+
+    <string name="background_location_permission_info">Meine-Stadt-rettet needs your location to send you appropriate emergency calls in your area.</string>
+</resources>

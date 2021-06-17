@@ -1,0 +1,128 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="false"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        app:subtitleTextColor="@color/icons"
+        app:titleTextColor="@color/icons"
+        app:theme="@style/ThemeToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?colorPrimary">
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        tools:context="com.aurel.ecorescue.view.map.MapActivity" />
+
+    <RelativeLayout
+        android:id="@+id/map_info"
+        android:layout_width="match_parent"
+        android:layout_height="140dip"
+        android:background="@color/colorWhite"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible"
+        android:elevation="8dp"
+        >
+
+        <ImageView
+            android:id="@+id/mapinfo_iWalk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="16dp"
+            android:paddingRight="8dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            app:srcCompat="@drawable/ic_walk" />
+
+        <TextView
+            android:id="@+id/mapinfo_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Schön Klinik München Harlaching asdf a sadf qers fasrqer qws"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+            />
+
+
+        <TextView
+            android:id="@+id/mapinfo_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/mapinfo_title"
+            android:layout_below="@+id/mapinfo_title"
+            android:layout_marginTop="8dp"
+            android:text="TextView"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small" />
+
+        <TextView
+            android:id="@+id/mapinfo_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8min"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+            android:gravity="center"
+            android:layout_toEndOf="@+id/mapinfo_iWalk"
+            android:layout_alignTop="@+id/mapinfo_iWalk"
+            android:layout_alignBottom="@+id/mapinfo_iWalk" />
+
+        <ImageButton
+            android:id="@+id/mapinfo_navigate"
+            style="@style/Widget.AppCompat.ImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@android:color/transparent"
+            android:onClick="onClick"
+            android:padding="8dp"
+            app:srcCompat="@drawable/ic_navigate" />
+
+        <ImageButton
+            android:id="@+id/mapinfo_info"
+            style="@style/Widget.AppCompat.ImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/mapinfo_navigate"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_toStartOf="@+id/mapinfo_navigate"
+            android:background="@android:color/transparent"
+            android:animateLayoutChanges="true"
+            android:onClick="onClick"
+            android:padding="8dp"
+            app:srcCompat="@drawable/ic_info" />
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/create_defibrilator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_defibrillator"
+        app:fabSize="normal"
+        app:maxImageSize="36dp"
+        app:useCompatPadding="false" />
+
+</RelativeLayout>

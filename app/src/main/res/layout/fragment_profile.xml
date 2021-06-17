@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="com.aurel.ecorescue.data.UserStatus" />
+        <variable
+            name="viewmodel"
+            type="com.aurel.ecorescue.ui.account.profile.ProfileViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/md_grey_100"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            app:elevation="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent" >
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                app:navigationIcon="@drawable/ic_menu_white_24dp"
+                app:subtitleTextColor="@color/icons"
+                app:titleTextColor="@color/icons"
+                app:theme="@style/ThemeToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title="@string/profile"
+                android:background="?attr/colorPrimary"/>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefresh"
+            android:layout_below="@+id/appbar"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nestedScrollView"
+                android:layout_below="@+id/appbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_height="1dp"
+                        android:layout_width="match_parent"
+                        android:background="@color/icons"/>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/colorPrimary">
+
+                        <ImageView
+                            android:id="@+id/iv_user_image"
+                            android:layout_width="72dp"
+                            android:layout_height="72dp"
+                            android:focusable="true"
+                            android:clickable="true"
+                            android:layout_marginStart="@dimen/activity_horizontal_margin"
+                            android:layout_marginTop="@dimen/activity_vertical_margin"
+                            android:layout_marginBottom="@dimen/activity_vertical_margin"
+                            android:contentDescription="@string/content_description_null"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:imageUrl="@{viewmodel.profile.imageUrl}"
+                            app:srcCompat="@drawable/logo_v2"
+                            tools:layout_conversion_wrapHeight="210"
+                            tools:layout_conversion_wrapWidth="210" />
+
+                        <TextView
+                            android:id="@+id/tv_full_name"
+                            style="@style/TextAppearance"
+                            android:textSize="@dimen/text_single_line"
+                            android:textColor="@color/icons"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/tv_email"
+                            android:layout_marginStart="@dimen/activity_horizontal_margin"
+                            android:ellipsize="end"
+                            android:textStyle="bold"
+                            android:maxLines="1"
+                            android:text="@{viewmodel.profile.fullName}"
+                            app:layout_constraintBottom_toTopOf="@+id/tv_email"
+                            app:layout_constraintStart_toEndOf="@+id/iv_user_image" />
+
+
+                        <TextView
+                            android:id="@+id/tv_email"
+                            style="@style/TextAppearance"
+                            android:textSize="@dimen/text_single_line"
+                            android:textColor="@color/icons"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/activity_horizontal_margin"
+                            android:layout_marginTop="@dimen/activity_vertical_margin"
+                            android:layout_marginBottom="@dimen/activity_vertical_margin"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="@{viewmodel.profile.email}"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/iv_user_image"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_status_text"
+                            style="@style/TextAppearance"
+                            android:textSize="@dimen/text_single_line"
+                            android:textColor="@color/icons"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/activity_horizontal_margin"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="@string/drawer_header_status"
+                            app:layout_constraintStart_toEndOf="@+id/iv_user_image"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_email" />
+
+                        <TextView
+                            android:id="@+id/tv_status"
+                            style="@style/TextAppearance"
+                            android:textSize="@dimen/text_single_line"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_email"
+                            android:layout_marginStart="8dp"
+                            android:layout_toEndOf="@+id/tv_status_text"
+                            android:background="@drawable/bg_status"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:paddingStart="4dp"
+                            android:paddingEnd="4dp"
+                            android:text="@{(viewmodel.userStatus == UserStatus.ACTIVE) ? @string/user_active : @string/user_inactive}"
+                            android:textColor="@{(viewmodel.userStatus == UserStatus.ACTIVE) ? @color/md_green_700 : @color/md_red_700}"
+                            app:layout_constraintStart_toEndOf="@+id/tv_status_text"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_email" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/activity_horizontal_margin"
+                        android:background="@color/md_grey_100"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@color/colorWhite">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/cl_agreement"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <ImageView
+                                android:id="@+id/iv_category_stepper_agreement"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                                android:src="@{viewmodel.profile.statusAgreementSigned ? @drawable/profile_progress_first_green : @drawable/profile_progress_first_red}"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:contentDescription="@string/content_description_null" />
+
+                            <ImageView
+                                android:id="@+id/iv_category_image_agreement"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:contentDescription="@string/content_description_null"
+                                android:src="@drawable/ic_contract"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/iv_category_stepper_agreement"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.5" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/iv_category_image_agreement"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.5">
+
+                                <TextView
+                                    style="@style/TextAppearance"
+                                    android:textSize="@dimen/text_title_medium"
+                                    android:textColor="@color/primary_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/agreement"/>
+
+                                <TextView
+                                    style="@style/TextAppearance"
+                                    android:textSize="@dimen/text_subtitle_medium"
+                                    android:textColor="@color/secondary_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{viewmodel.profile.statusAgreementSigned ? @string/agreement_signed : @string/agreement_not_signed}"
+                                    />
+
+                            </LinearLayout>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="@dimen/activity_horizontal_margin"
+                            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                            android:background="@color/md_grey_100"/>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/cl_personal_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <ImageView
+                                android:id="@+id/iv_category_stepper_personal_data"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                                android:src="@{viewmodel.profile.statusPersonalDataComplete ? @drawable/profile_progress_green : @drawable/profile_progress_red}"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:contentDescription="@string/content_description_null" />
+
+                            <ImageView
+                                android:id="@+id/iv_category_image_personal_data"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:contentDescription="@string/content_description_null"
+                                android:src="@drawable/ic_identification"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/iv_category_stepper_personal_data"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.5" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/iv_category_image_personal_data"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.5">
+
+                                <TextView
+                                    style="@style/TextAppearance"
+                                    android:textSize="@dimen/text_title_medium"
+                                    android:textColor="@color/primary_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/personal_data"/>
+
+                                <TextView
+                                    style="@style/TextAppearance"
+                                    android:textSize="@dimen/text_subtitle_medium"
+                                    android:textColor="@color/secondary_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{viewmodel.profile.statusPersonalDataComplete ? @string/personal_data_complete : @string/personal_data_incomplete}"
+                                    />
+
+                            </LinearLayout>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="@dimen/activity_horizontal_margin"
+                            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                            android:background="@color/md_grey_100"/>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/cl_certificate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <ImageView
+                                android:id="@+id/iv_category_stepper_certificate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                                android:src="@{viewmodel.profile.statusCertificate==2 ? @drawable/profile_progress_green : (viewmodel.profile.statusCertificate==1 ? @drawable/profile_progress_orange : @drawable/profile_progress_red)}"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:contentDescription="@string/content_description_null" />
+
+                            <ImageView
+                                android:id="@+id/iv_category_image_certificate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:contentDescription="@string/content_description_null"
+                                android:src="@drawable/ic_certificate"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/iv_category_stepper_certificate"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.5" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/iv_category_image_certificate"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.5">
+
+                                <TextView
+                                    style="@style/TextAppearance"
+                                    android:textSize="@dimen/text_title_medium"
+                                    android:textColor="@color/primary_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/certificate"/>
+
+                                <TextView
+                                    style="@style/TextAppearance"
+                                    android:textSize="@dimen/text_subtitle_medium"
+                                    android:textColor="@color/secondary_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{viewmodel.profile.statusCertificate>1 ? @string/certificate_reviewed : (viewmodel.profile.statusCertificate>0 ? @string/certificate_in_review : @string/certificate_not_submitted)}"
+                                    />
+
+                            </LinearLayout>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="@dimen/activity_horizontal_margin"
+                            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                            android:background="@color/md_grey_100"/>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/cl_access"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <ImageView
+                                android:id="@+id/iv_category_stepper_access"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                                android:src="@{viewmodel.profile.statusAccessSetUp ? @drawable/profile_progress_green : @drawable/profile_progress_red}"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:contentDescription="@string/content_description_null" />
+
+                            <ImageView
+                                android:id="@+id/iv_category_image_access"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:contentDescription="@string/content_description_null"
+                                android:src="@drawable/ic_pin"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/iv_category_stepper_access"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.5" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/iv_category_image_access"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.5">
+
+                                <TextView
+                                    style="@style/TextAppearance"
+                                    android:textSize="@dimen/text_title_medium"
+                                    android:textColor="@color/primary_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/access"/>
+
+                                <TextView
+                                    style="@style/TextAppearance"
+                                    android:textSize="@dimen/text_subtitle_medium"
+                                    android:textColor="@color/secondary_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{viewmodel.profile.statusAccessSetUp ? @string/access_change_pin : @string/access_no_pin_set_up}"
+                                    />
+
+                            </LinearLayout>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="@dimen/activity_horizontal_margin"
+                            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                            android:background="@color/md_grey_100"/>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/cl_notifications"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <ImageView
+                                android:id="@+id/iv_category_stepper_notifications"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                                android:src="@{viewmodel.profile.statusNotificationsOn ? @drawable/profile_progress_green : @drawable/profile_progress_red}"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:contentDescription="@string/content_description_null" />
+
+                            <ImageView
+                                android:id="@+id/iv_category_image_notifications"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:contentDescription="@string/content_description_null"
+                                android:src="@drawable/ic_notifications_black_24dp"
+                                android:tint="@color/md_black_1000"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/iv_category_stepper_notifications"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.5" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/iv_category_image_notifications"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.5">
+
+                                <TextView
+                                    style="@style/TextAppearance"
+                                    android:textSize="@dimen/text_title_medium"
+                                    android:textColor="@color/primary_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/notifications"/>
+
+                                <TextView
+                                    style="@style/TextAppearance"
+                                    android:textSize="@dimen/text_subtitle_medium"
+                                    android:textColor="@color/secondary_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{viewmodel.profile.statusNotificationsOn ? @string/notifications_enabled : @string/notifications_disabled}"
+                                    />
+
+                            </LinearLayout>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="@dimen/activity_horizontal_margin"
+                            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                            android:background="@color/md_grey_100"/>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/cl_location"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <ImageView
+                                android:id="@+id/iv_category_stepper_location"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                                android:src="@{viewmodel.profile.statusLocationAuthorized ? @drawable/profile_progress_last_green : @drawable/profile_progress_last_red}"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:contentDescription="@string/content_description_null" />
+
+                            <ImageView
+                                android:id="@+id/iv_category_image_location"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:contentDescription="@string/content_description_null"
+                                android:src="@drawable/ic_location"
+                                android:tint="@color/md_black_1000"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/iv_category_stepper_location"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.5" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/iv_category_image_location"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.5">
+
+                                <TextView
+                                    style="@style/TextAppearance"
+                                    android:textSize="@dimen/text_title_medium"
+                                    android:textColor="@color/primary_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/location"/>
+
+                                <TextView
+                                    style="@style/TextAppearance"
+                                    android:textSize="@dimen/text_subtitle_medium"
+                                    android:textColor="@color/secondary_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{viewmodel.profile.statusLocationAuthorized ? @string/location_authorized : @string/location_unauthorized}" />
+
+                            </LinearLayout>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/activity_horizontal_margin"
+                        android:background="@color/md_grey_100"/>
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+
+    </RelativeLayout>
+</layout>

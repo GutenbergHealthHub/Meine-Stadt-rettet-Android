@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.text.Html"/>
+<!--        <variable-->
+<!--            name="viewmodel"-->
+<!--            type="com.aurel.ecorescue.ui.account.profile.ProfileViewModel" />-->
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:background="@color/colorPrimary"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_centerHorizontal="true"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:src="@drawable/logo_v2"
+            android:contentDescription="@string/content_description_null" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_below="@+id/iv_logo"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/text_title_large"
+            android:textColor="@color/icons"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/intro_title_1" />
+
+        <View
+            android:id="@+id/v_divider"
+            android:layout_below="@+id/tv_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_height="4dp"
+            android:layout_width="match_parent"
+            android:background="@color/icons" />
+
+        <LinearLayout
+            android:layout_below="@+id/v_divider"
+            android:layout_above="@id/btn_close"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_scheme"
+                android:visibility="visible"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_scheme_intro_200dp"
+                android:contentDescription="@string/content_description_null" />
+
+            <com.aurel.ecorescue.utils.HtmlTextView
+                android:id="@+id/tv_content"
+                android:textSize="@dimen/text_subtitle_large"
+                android:textColor="@color/icons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:text="@string/intro_content_1" />
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_close"
+            android:onClick="onNextClicked"
+            android:textSize="@dimen/text_button"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            app:backgroundTint="@color/md_white_1000"
+            android:textColor="@color/md_red_700"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="@string/continue_button" />
+    </RelativeLayout>
+
+</layout>

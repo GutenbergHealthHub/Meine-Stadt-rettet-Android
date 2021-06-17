@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.aurel.ecorescue">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+<!--    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />-->
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:name=".StarterApplication"
+        android:allowBackup="false"
+        android:fullBackupContent="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:allowBackup">
+
+        <service
+            android:name=".receivers.FMService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <receiver
+            android:name=".receivers.EmergencyReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.parse.push.intent.RECEIVE" />
+                <action android:name="com.parse.push.intent.OPEN" />
+                <action android:name="com.parse.push.intent.DELETE" />
+            </intent-filter>
+        </receiver>
+        <meta-data
+            android:name="com.parse.push.notification_icon"
+            android:resource="@drawable/heart_pulse" />
+
+        <!--        Location        -->
+        <service
+            android:name=".utils.GetAddressIntentService"
+            android:exported="false"/>
+        <service
+            android:name=".view.x_emergency.x_LocationTrackingService"
+            android:foregroundServiceType="location" />
+        <service
+            android:name=".service.BackgroundLocationService"
+            android:foregroundServiceType="location" />
+
+        <!--        Alarm        -->
+        <receiver android:name=".receivers.AlarmReceiver" />
+
+
+        <!--        Other        -->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!--        Activities        -->
+        <activity
+            android:name=".ui.emergency.IdentificationCardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.IntroActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.f_login_register.LoginRegisterActivity"
+            android:parentActivityName=".view.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.f_login_register.EmailVerificationActivity"
+            android:parentActivityName=".view.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.x_emergency.IncomingEmergencyActivity"
+            android:parentActivityName=".view.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.map.ImageViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.news.InformationItemTabActivityX"
+            android:label="@string/title_activity_information_item_tab"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.news.InformationItemActivityX"
+            android:parentActivityName=".view.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.ImageDetailActivity"
+            android:parentActivityName=".view.news.InformationItemActivityX"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".security.SecurityActivityX"
+            android:label="@string/security"
+            android:parentActivityName=".view.MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".view.MainActivity" />
+        </activity>
+        <activity
+            android:name=".security.SecurityEditPin"
+            android:label="@string/pin"
+            android:parentActivityName=".security.SecurityActivityX"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".security.SecurityActivityX" />
+        </activity>
+        <activity
+            android:name=".security.SecurityEditPassword"
+            android:label="@string/password"
+            android:parentActivityName=".security.SecurityActivityX"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".security.SecurityActivityX" />
+        </activity>
+        <activity
+            android:name=".profile.steps.AgreementActivity"
+            android:label="@string/signature_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.x_emergency.PinCheckActivity"
+            android:windowSoftInputMode="stateVisible"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.map.MapActivity"
+            android:label="@string/title_activity_map"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.map.MapDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.x_emergency.AcceptEmergencyActivity"
+            android:label="@string/emergency"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.map.CreateDefibrilatorActivityX"
+            android:label="@string/title_activity_create_defibrilator"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.map.ViewOwnDefibrilators"
+            android:label="@string/view_added_defibrillator"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.x_SplashscreenActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.x_emergency.ExpiredEmergencyActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.protocols.ListIncompleteProtocolsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.protocols.ProtocolActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.protocols.ProtocolFinishedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.x_emergency.EmergencyFinishedActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

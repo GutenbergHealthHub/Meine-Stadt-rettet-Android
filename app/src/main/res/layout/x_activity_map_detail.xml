@@ -1,0 +1,292 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="false">
+
+    <!--<android.support.v7.widget.Toolbar-->
+    <!--android:id="@+id/toolbar"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="?colorPrimary"-->
+    <!--android:elevation="8dp"-->
+    <!--android:theme="@style/AppThemeMSR.AppBarOverlay" />-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorWhite"
+        android:elevation="12dp"
+        android:id="@+id/footer"
+        android:animateLayoutChanges="true"
+        >
+
+
+        <ImageButton
+            android:id="@+id/navigate"
+            style="@style/Widget.AppCompat.ImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/transparent"
+            android:onClick="onClick"
+            app:srcCompat="@drawable/ic_navigate" />
+
+
+        <ImageButton
+            android:id="@+id/ibwalkingdistance"
+            style="@style/Widget.AppCompat.ImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/ic_walk" />
+
+        <TextView
+            android:id="@+id/distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ibwalkingdistance"
+            android:layout_alignTop="@+id/ibwalkingdistance"
+            android:layout_toRightOf="@id/ibwalkingdistance"
+            android:gravity="center"
+            android:text="\? min" />
+
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:elevation="16dp"
+        android:layout_above="@id/footer">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                tools:context="com.aurel.ecorescue.view.map.MapActivity" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/map"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Krankenhaus Rechts der Isar"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large" />
+
+            <RelativeLayout
+                android:id="@+id/dividerTitle"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/title"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="18dp"
+                android:background="@color/colorGrey" />
+
+            <TextView
+                android:id="@+id/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/dividerTitle"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Straße 3, 80333 München"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+
+            <RelativeLayout
+                android:id="@+id/dividerSubTitle"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/subtitle"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="18dp"
+                android:background="@color/colorGrey" />
+
+            <RelativeLayout
+                android:id="@+id/container_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dividerSubTitle">
+
+
+                <ImageView
+                    android:id="@+id/image_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/ic_phone" />
+
+                <TextView
+                    android:id="@+id/phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/image_phone"
+                    android:layout_alignTop="@+id/image_phone"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_toRightOf="@id/image_phone"
+                    android:autoLink="phone"
+                    android:gravity="center"
+                    android:text="011241 12314124"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+
+
+                <RelativeLayout
+                    android:id="@+id/dividerPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@id/phone"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/colorGrey" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/container_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/container_phone">
+
+                <ImageView
+                    android:id="@+id/image_web"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/ic_web" />
+
+                <TextView
+                    android:id="@+id/url"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/image_web"
+                    android:layout_alignTop="@+id/image_web"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_toRightOf="@id/image_web"
+                    android:autoLink="web"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:text="www.krankenhaus.de"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+
+
+                <RelativeLayout
+                    android:id="@+id/dividerUrl"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@id/url"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="18dp"
+                    android:background="@color/colorGrey" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/container_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/container_url">
+
+
+                <TextView
+                    android:id="@+id/info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="bla bla bla"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+
+
+                <RelativeLayout
+                    android:id="@+id/dividerInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@id/info"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="18dp"
+                    android:background="@color/colorGrey" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/container_photos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/container_info">
+
+
+                <ImageView
+                    android:id="@+id/photo1"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="bla bla bla"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+
+                <ImageView
+                    android:id="@+id/photo2"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_toRightOf="@id/photo1"
+                    android:text="bla bla bla"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+
+                <ImageView
+                    android:id="@+id/photo3"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_toRightOf="@id/photo2"
+                    android:text="bla bla bla"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+
+                <RelativeLayout
+                    android:id="@+id/dividerPhotos"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@id/photo1"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="18dp"
+                    android:background="@color/colorGrey" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
