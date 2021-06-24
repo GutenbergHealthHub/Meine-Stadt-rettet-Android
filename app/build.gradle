@@ -6,19 +6,40 @@ plugins {
     id 'kotlin-kapt'
 }
 
+// load keystore properties from file in root folder
+def keystorePropertiesFile = rootProject.file("keystore.properties")
+def keystoreProperties = new Properties()
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 
 android {
     compileSdkVersion 30
     buildToolsVersion '28.0.3'
 
     defaultConfig {
-        applicationId ""
+        applicationId "com.aurel.ecorescue"
         minSdkVersion 18
         targetSdkVersion 30
         versionCode 1
         versionName "Version 1.0"
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        release {
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+        }
+
+        debug {
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+            storeFile file('debug.keystore')
+            storePassword 'android'
+
+        }
     }
 
     lintOptions {
@@ -35,6 +56,13 @@ android {
             lintOptions {
                 disable 'MissingTranslation'
             }
+            signingConfig signingConfigs.release
+        }
+        debug {
+            signingConfig signingConfigs.debug
+        }
+        development {
+            signingConfig signingConfigs.debug
         }
     }
 
