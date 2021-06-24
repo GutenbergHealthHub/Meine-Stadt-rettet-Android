@@ -11,6 +11,9 @@ def keystorePropertiesFile = rootProject.file("keystore.properties")
 def keystoreProperties = new Properties()
 keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 
+def localProperties = new Properties()
+localProperties.load(new FileInputStream(rootProject.file("local.properties")))
+
 android {
     compileSdkVersion 30
     buildToolsVersion '28.0.3'
@@ -23,6 +26,9 @@ android {
         versionName "Version 1.0"
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField("String", "PARSE_SERVER_URL", localProperties['parseServerURL'])
+        buildConfigField("String", "PARSE_APP_ID", localProperties['parseAppID'])
+        buildConfigField("String", "PARSE_CLIENT_KEY", localProperties['parseClientKey'])
     }
 
     signingConfigs {
@@ -38,7 +44,6 @@ android {
             keyPassword 'android'
             storeFile file('debug.keystore')
             storePassword 'android'
-
         }
     }
 
@@ -59,9 +64,6 @@ android {
             signingConfig signingConfigs.release
         }
         debug {
-            signingConfig signingConfigs.debug
-        }
-        development {
             signingConfig signingConfigs.debug
         }
     }

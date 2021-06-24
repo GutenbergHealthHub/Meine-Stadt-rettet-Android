@@ -59,7 +59,7 @@ public class NavigationDrawer {
     private PrimaryDrawerItem itemStandby = new PrimaryDrawerItem().withIdentifier(STANDBY_MODE).withName(R.string.drawer_account_standby);
     private PrimaryDrawerItem itemSpontaneousHelper = new PrimaryDrawerItem().withIdentifier(SPONTANEOUS_HELPER).withName(R.string.spontaneous_helper);
     private PrimaryDrawerItem itemAboutApp = new PrimaryDrawerItem().withIdentifier(ABOUT_APP).withName(R.string.drawer_about).withSelectable(false);
-    private PrimaryDrawerItem itemAboutMeineStadtRettet = new PrimaryDrawerItem().withIdentifier(ABOUT_MeineStadtRettet).withName(R.string.about_MeineStadtRettet);
+    private PrimaryDrawerItem itemAboutMeineStadtRettet = new PrimaryDrawerItem().withIdentifier(ABOUT_MeineStadtRettet).withName(R.string.about_meinestadtrettet);
     private PrimaryDrawerItem itemFAQ = new PrimaryDrawerItem().withIdentifier(FAQ).withName(R.string.drawer_about_faq);
     private PrimaryDrawerItem itemContact = new PrimaryDrawerItem().withIdentifier(CONTACT_AND_IMPRINT).withName(R.string.drawer_about_contact);
     private PrimaryDrawerItem itemLegal = new PrimaryDrawerItem().withIdentifier(LEGAL_NOTICE).withName(R.string.drawer_about_legal);

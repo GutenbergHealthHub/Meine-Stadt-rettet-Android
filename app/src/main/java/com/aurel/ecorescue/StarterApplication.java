@@ -4,7 +4,6 @@ import android.app.Application;
 import android.content.ComponentCallbacks2;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.util.Log;
 
 import androidx.multidex.MultiDex;
 
@@ -40,10 +39,11 @@ public class StarterApplication extends Application {
         ParseObject.registerSubclass(ControlCenter.class);
         // Add your initialization code here
         Parse.setLogLevel(Parse.LOG_LEVEL_VERBOSE);
+        // set up parse
         Parse.initialize(new Parse.Configuration.Builder(this)
-                .applicationId(getResources().getString(R.string.parse_app_id))
-                .clientKey(getString(R.string.client_key))
-                .server(getResources().getString(R.string.server_url))
+                .applicationId(BuildConfig.PARSE_APP_ID)
+                .clientKey(BuildConfig.PARSE_CLIENT_KEY)
+                .server(BuildConfig.PARSE_SERVER_URL)
                 .build()
         );
 

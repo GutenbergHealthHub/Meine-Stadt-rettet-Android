@@ -7,11 +7,6 @@
     <string name="google_maps_key_web" templateMergeStrategy="preserve" translatable="false">MapsKeyWeb</string>
     <string name="emergency_broadcast" translatable="false">de.ecorescue.emergency</string>
 
-    <!--Parse Backend New Server-->
-    <string name="parse_app_id" translatable="false">ParseAppId</string>
-    <string name="server_url" translatable="false">ParseServerURL</string>
-    <string name="client_key" translatable="false">ParseClientKey</string>
-
     <!--Parse Backend-->
     <string name="gcm_sender_ID" translatable="false">gcm_sender_ID</string>
     <string name="gcm_sender" translatable="false">id:gcm_sender_ID</string>
@@ -1077,4 +1072,5 @@ Eget velit aliquet sagittis id. Lorem ipsum dolor sit amet consectetur adipiscin
     <string name="general_spontaneous_assistance_eg">e.g. food banks, food delivery</string>
 
     <string name="background_location_permission_info">Meine-Stadt-rettet needs your location to send you appropriate emergency calls in your area.</string>
+    <string name="about_meinestadtrettet">About Meine Stadt rettet</string>
 </resources>
